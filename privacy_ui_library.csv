@@ -1,0 +1,139 @@
+Parent GDPR Category (Task-Oriented Main Pattern),Pattern Definition,GDPR basis (Articles + links + GDPR tag expectations),Observable UI Conditions (UI Evidence Tags),Pattern Goal (aligned with GDPR),Use Cases / When to Use,Empirical / Regulatory Evidence (Use Cases),Common Implementation Pitfalls (Observed),Empirical / Regulatory Evidence (Pitfalls),Heuristics Considerations per Pattern,Source / Where These Heuristics Come From,Why These Heuristics Matter,Key Design Expectations (Abstract),Design Choices That Support Heuristics,Key Evaluative Questions (GDPR + heuristics)
+Layered Privacy Notice,"Presents privacy information in progressive layers, beginning with a concise overview and allowing users to access deeper detail as needed.","Art. 12 – Transparent information, communication and modalities (https://www.legislation.gov.uk/eur/2016/679/article/12)
+- GDPR-A12-Plain-Language-Notice
+- GDPR-A12-Readable-Formatting
+- GDPR-A12-Accessible-Notice-Presentation
+
+Art. 13 – Information to be provided where personal data are collected from the data subject (https://www.legislation.gov.uk/eur/2016/679/article/13)
+- GDPR-A13-Data-Controller-Identified
+- GDPR-A13-Purpose-Explained-at-Collection
+- GDPR-A13-Recipient-Disclosure
+- GDPR-A13-Retention-Info-Provided
+- GDPR-A13-Rights-Explained-in-UI
+
+Art. 5 – Principles relating to processing of personal data (https://www.legislation.gov.uk/eur/2016/679/article/5)
+- GDPR-A5-Transparent-Data-Use-Explanation
+
+Art. 14 – Information to be provided where personal data have not been obtained from the data subject (conditional) (https://www.legislation.gov.uk/eur/2016/679/article/14)
+- GDPR-A14-Third-Party-Data-Source-Disclosed
+- GDPR-A14-Indirect-Collection-Explained","- UI-Summary-Privacy-Overview-Present
+- UI-Standardized-Privacy-Categories
+- UI-Compact-Privacy-Format
+- UI-Visual-Separation-Summary-vs-Full
+- UI-Expandable-Privacy-Details
+- UI-Non-Legal-Language-Labels","Enable fast, accurate understanding of key privacy terms (data types, purposes, sharing, retention) without requiring full policy reading; support transparent notice delivery at appropriate moments.","Use when users must be informed about multiple data practices but are unlikely to read long policies; common in signup flows, consent dialogs, app settings, and policy entry points.","Kelley et al., 2009 (SOUPS); EDPB guidance on transparency (Arts. 12–13)",Overloading the first layer with dense or legalistic text; omitting key purposes or recipients from the summary; placing critical information only in deep layers rarely accessed.,"Kelley et al., 2009 (SOUPS); Nouwens et al., 2020 (CHI)",Recognition rather than recall; Aesthetic & minimalist design; Visibility of information,"Nielsen’s usability heuristics (Nielsen, 1994; Nielsen, 1995); cognitive psychology on working-memory limits and cognitive load (Sweller, 1988; Sweller et al., 2011); information and document design research emphasizing hierarchy, scannability, and visual clarity (Tufte, 2001; Hartley, 1994).","Effectiveness depends on rapid comprehension and scannability. Privacy disclosures fail when users must read, recall, or interpret dense legal text. Recognition-based, visually structured information reduces cognitive load and improves comprehension.","Information must be scannable, hierarchically structured, and interpretable without requiring full policy reading.","Use a standardized summary layout (rows/columns/icons), clear section headers, and progressive disclosure (‘learn more’) to manage cognitive load and support recognition over recall.","Can a user identify: (1) what data is collected, (2) why, (3) who it’s shared with, (4) retention, and (5) key rights in under ~60 seconds? Is the full policy accessible from the summary? Is information presented in clear plain language?"
+Just-in-Time Notice,Provides contextual privacy information at the moment a user is about to provide data or enable a data-dependent feature.,"Art. 13 – Information to be provided where personal data are collected from the data subject (https://www.legislation.gov.uk/eur/2016/679/article/13)
+- GDPR-A13-Data-Use-Explained-at-Collection
+- GDPR-A13-Purpose-Explained-at-Collection
+
+Art. 12 – Transparent information, communication and modalities (https://www.legislation.gov.uk/eur/2016/679/article/12)
+- GDPR-A12-Accessible-Notice-Presentation
+
+Art. 5 – Principles relating to processing of personal data (https://www.legislation.gov.uk/eur/2016/679/article/5)
+- GDPR-A5-Data-Use-Visible-at-Collection
+- GDPR-A5-Transparent-Data-Use-Explanation
+
+Art. 7 – Conditions for consent (when the notice supports a consent decision) (https://www.legislation.gov.uk/eur/2016/679/article/7)
+- GDPR-A7-Clear-Distinguishable-Consent
+- GDPR-A7-Plain-Language-Consent-Copy","- UI-Notice-Timed-at-Data-Request
+- UI-Context-Specific-Permission-Explanation
+- UI-Purpose-Explained-In-Action
+- UI-Permission-Request-Unbundled
+- UI-Decline-Option-Available
+- UI-Feature-Access-Not-Blocked-On-Decline",Present privacy-relevant information at the moment of decision so users understand why a permission/data action is requested and can make an informed choice.,"Use when requesting permissions, sensitive inputs, or non-obvious data uses—especially during onboarding, first-time feature use, or permission prompts where timing affects comprehension.","Balebako et al., 2014 (SOUPS); Fang et al., 2022 (CHI); ICO/EDPB transparency guidance",Displaying notices after data collection has occurred; using generic explanations unrelated to the action; bundling multiple permissions into a single notice.,"Balebako et al., 2014 (SOUPS); Fang et al., 2022 (CHI)",Match between system & real world; Visibility of system status; Error prevention,"Nielsen’s usability heuristics (Nielsen, 1994); human-factors and situated interaction theory showing that meaning and understanding depend on context and timing (Norman, 2013; Dourish, 2001); usable privacy research demonstrating that untimely or hidden disclosures lead to misunderstanding or unintended actions (Schaub et al., 2015).",Timing and contextual relevance drive observed effects. Privacy meaning is context-dependent. Disclosures detached from action are ignored or misunderstood.,Notices must appear at the moment of decision and be clearly linked to the triggering action.,"Trigger the explanation immediately before the permission prompt; tie wording to the user’s current goal (‘to do X, we need Y’); provide a clear decline path and avoid bundling.",Does the notice appear at the exact decision moment? Is it clearly tied to the triggering action? Does it state the data type and purpose in user language? Can the user decline without unrelated feature lockout?
+Granular Consent Controls,"Enables users to make separate, independent consent decisions for distinct purposes of data processing rather than a single bundled choice.","Art. 7 – Conditions for consent (https://www.legislation.gov.uk/eur/2016/679/article/7)
+- GDPR-A7-Granular-Consent-Options
+- GDPR-A7-No-Preselected-Consent
+- GDPR-A7-Explicit-Affirmative-Action
+- GDPR-A7-Consent-Visually-Distinct
+
+Art. 5 – Principles relating to processing of personal data (https://www.legislation.gov.uk/eur/2016/679/article/5)
+- GDPR-A5-Purpose-Specific-Consent-Options
+- GDPR-A5-Purpose-Separated-Controls
+- GDPR-A5-Purpose-Explained-in-Context
+
+Art. 6 – Lawfulness of processing (basis signalling per purpose) (https://www.legislation.gov.uk/eur/2016/679/article/6)
+- GDPR-A6-Processing-Basis-Explained","- UI-Purposes-Named-in-User-Language
+- UI-One-Control-Per-Purpose
+- UI-No-All-Or-Nothing-Consent
+- UI-Consent-State-Visible
+- UI-Purpose-Controls-Independently-Changeable","Allow users to consent (or not) to discrete purposes independently so consent is specific, granular, and reversible.","Use when data is processed for multiple purposes (e.g., analytics, personalization, marketing); common in cookie preference panels, onboarding consent flows, and privacy settings.","Nouwens et al., 2020 (CHI); Utz et al., 2019 & 2023 (CHI); GDPR Art. 7 interpretations",Grouping multiple purposes under one toggle; using vague or technical purpose labels; offering granularity only after initial acceptance.,"Nouwens et al., 2020 (CHI); Utz et al., 2023 (CHI)",User control & freedom; Error prevention,"Nielsen’s usability heuristics (Nielsen, 1994); interaction design theory emphasizing reversible actions and avoidance of irreversible user errors (Norman, 2013); behavioral decision-making research showing that interface constraints and friction affect voluntariness and choice quality (Thaler & Sunstein, 2008).",Independent choices prevent accidental or bundled consent. Bundled consent obscures user intent and increases accidental agreement.,Each purpose must be independently actionable and understandable.,Name purposes in user language; provide one toggle per purpose; avoid ‘accept all’ as the only clear path; keep state visible; support independent changes at any time.,Are purposes separated into independent choices? Are toggles unbundled and understandable? Is any consent preselected? Can a user enable one purpose while disabling another with immediate feedback?
+Equal Accept / Reject,"Presents acceptance and rejection options with equal visual prominence, interaction cost, and neutral framing to avoid biasing consent decisions.","Art. 7 – Conditions for consent (https://www.legislation.gov.uk/eur/2016/679/article/7)
+- GDPR-A7-Equal-Prominence-Accept-Reject
+- GDPR-A7-Consent-Separate-from-Terms
+- GDPR-A7-Consent-Visually-Distinct
+
+Art. 12 – Transparent information, communication and modalities (https://www.legislation.gov.uk/eur/2016/679/article/12)
+- GDPR-A12-Readable-Formatting
+
+Art. 5 – Principles relating to processing of personal data (https://www.legislation.gov.uk/eur/2016/679/article/5)
+- GDPR-A5-No-Hidden-Processing-UI","- UI-Accept-Reject-Visual-Symmetry
+- UI-Accept-Reject-Equal-Interaction-Cost
+- UI-Reject-Option-Immediately-Visible
+- UI-Neutral-Consent-Copy
+- UI-No-Visual-Bias-Toward-Accept",Ensure consent is freely actionable in the interface by preventing biased choice presentation and reducing coercive or asymmetric friction.,"Use whenever consent is optional and refusal must be a genuine choice, such as cookie banners, data-sharing prompts, and marketing opt-ins—particularly in regulated contexts.","Nouwens et al., 2020 (CHI); EDPB dark pattern guidance",Visually emphasizing “Accept” over “Reject”; requiring extra steps to reject; using emotionally loaded or fear-based language.,"Nouwens et al., 2020 (CHI); Mathur et al., 2019; EDPB guidance",User control & freedom; Error prevention,"(Nielsen, 1994; Norman, 2013), reinforced by usable privacy and dark-pattern research showing that asymmetric or coercive interfaces undermine meaningful choice and lead to unintentional consent (Gray et al., 2018; Nouwens et al., 2020).",Symmetry prevents coerced or biased decisions. Asymmetry introduces bias and undermines voluntariness.,Accept and reject options must be equally visible and actionable.,Use symmetric button styling and placement; keep Reject on the first layer; avoid guilt/urgency language; ensure decline does not require extra steps compared to accept.,"Are Accept and Reject equally prominent (size, color emphasis, placement)? Is Reject immediately available without extra clicks? Is copy neutral? Is the consent request clearly separated from other content (e.g., Terms)?"
+Preference Center,A centralized interface that allows users to view and manage privacy and data-related preferences over time.,"Art. 12 – Transparent information, communication and modalities (supporting rights exercise UX) (https://www.legislation.gov.uk/eur/2016/679/article/12)
+- GDPR-A12-Accessible-Notice-Presentation
+
+Art. 15 – Right of access by the data subject (https://www.legislation.gov.uk/eur/2016/679/article/15)
+- GDPR-A15-Data-Access-Entry-Point
+- GDPR-A15-View-Personal-Data-UI
+- GDPR-A15-Processing-Overview-Visible
+
+Art. 16 – Right to rectification (https://www.legislation.gov.uk/eur/2016/679/article/16)
+- GDPR-A16-Editable-Personal-Data
+- GDPR-A16-Update-Data-Flow-Available
+
+Art. 17 – Right to erasure (https://www.legislation.gov.uk/eur/2016/679/article/17)
+- GDPR-A17-Delete-Data-Request-UI
+- GDPR-A17-Account-Deletion-Path-Visible
+- GDPR-A17-Deletion-Scope-Explained
+
+Art. 18 – Right to restriction of processing (https://www.legislation.gov.uk/eur/2016/679/article/18)
+- GDPR-A18-Processing-Restriction-Option
+- GDPR-A18-Restricted-State-Explained
+
+Art. 20 – Right to data portability (https://www.legislation.gov.uk/eur/2016/679/article/20)
+- GDPR-A20-Data-Export-Available
+- GDPR-A20-Machine-Readable-Download
+- GDPR-A20-Portability-Explained
+
+Art. 21 – Right to object (https://www.legislation.gov.uk/eur/2016/679/article/21)
+- GDPR-A21-Objection-Control-Available
+- GDPR-A21-Direct-Marketing-Opt-Out
+
+Art. 7 – Conditions for consent (if consent preferences live here) (https://www.legislation.gov.uk/eur/2016/679/article/7)
+- GDPR-A7-Persistent-Consent-Withdrawal-Control","- UI-Dedicated-Privacy-Entry-Point
+- UI-Privacy-Controls-Centralized
+- UI-Data-Visibility-Present
+- UI-Preferences-Editable-Post-Onboarding
+- UI-Logical-Grouping-of-Privacy-Controls","Provide a stable, centralized place for users to view and manage privacy preferences and exercise data-subject rights.","Use when users need ongoing control beyond initial consent, especially in products with persistent accounts, long-term data use, or multiple configurable preferences.","Utz et al., 2019 (CHI); Utz et al., 2023 (CHI)",Scattering controls across multiple screens; making the center hard to find post-onboarding; allowing viewing without meaningful control.,"Utz et al., 2019 (CHI); Fang et al., 2022 (CHI)",Recognition rather than recall; Consistency & standards; User control & freedom,"Nielsen’s usability heuristics (Nielsen, 1994); mental-model and consistency research showing that predictable, centralized controls reduce cognitive effort and support user agency (Norman, 2013); privacy self-management literature highlighting the need for stable, recognizable control locations (Solove, 2013; Tsai et al., 2017).",Centralization enables ongoing rights exercise. Fragmented controls prevent effective privacy self-management.,"Controls must be centralized, consistent, and persistently accessible.",Provide a clearly labeled entry point (Settings → Privacy); group controls logically; show current states; include actionable links for access/edit/export/delete; confirm changes.,Can users find privacy controls within ~2–3 steps? Are preferences centralized (not scattered)? Can users view their data and understand key processing categories? Are export/delete/restriction actions discoverable and explained?
+Privacy-Protective Defaults,"Sets non-essential data processing to OFF by default, requiring affirmative user action to enable it.","Art. 25 – Data protection by design and by default (https://www.legislation.gov.uk/eur/2016/679/article/25)
+- GDPR-A25-Privacy-Protective-Defaults
+- GDPR-A25-Non-Essential-Processing-Off-by-Default
+- GDPR-A25-User-Control-Prioritized
+
+Art. 7 – Conditions for consent (pre-ticked / pre-enabled settings) (https://www.legislation.gov.uk/eur/2016/679/article/7)
+- GDPR-A7-No-Preselected-Consent
+
+Art. 5 – Principles relating to processing of personal data (minimization / proportionality cues) (https://www.legislation.gov.uk/eur/2016/679/article/5)
+- GDPR-A5-Optional-Data-Clearly-Marked
+- GDPR-A5-Non-Essential-Fields-Distinguished","- UI-Non-Essential-Processing-Off-By-Default
+- UI-Default-State-Visible
+- UI-Affirmative-Action-Required-To-Enable
+- UI-Defaults-Consistent-Across-Flows
+- UI-Default-Choices-Reversible",Reduce unintended processing by ensuring the default state is privacy-protective and non-essential processing requires opt-in.,"Use during first-run experiences, initial consent dialogs, and feature opt-ins, particularly when users may rush decisions influenced by defaults.","Utz et al., 2019 (CHI); GDPR Art. 25 (PbD & by default)",Enabling non-essential processing by default; re-enabling processing after updates; defaults contradicting prior user choices.,"Utz et al., 2019 (CHI); Nouwens et al., 2020 (CHI)",Error prevention; Visibility of system status,"Nielsen’s usability heuristics (Nielsen, 1994); behavioral economics research on default effects and status-quo bias demonstrating that unseen defaults strongly shape behavior (Johnson & Goldstein, 2003; Acquisti et al., 2017); privacy-by-design principles emphasizing proactive protection (Cavoukian, 2011).",Defaults shape behavior even without active choice. Users rarely change defaults; hidden defaults function as de facto consent.,Non-essential processing must be off by default and visible.,Set non-essential processing OFF; make default state visible; require affirmative action to enable; persist choices consistently; provide easy reversal.,Are non-essential settings OFF by default? Is the default visible without interaction? Does enabling require an affirmative action? Are defaults consistent across entry points and reversible with clear state feedback?
+Consent Withdrawal Mechanism,"Ensures users can withdraw previously given consent easily and at any time using discoverable, low-friction controls.","Art. 7 – Conditions for consent (withdrawal) (https://www.legislation.gov.uk/eur/2016/679/article/7)
+- GDPR-A7-Persistent-Consent-Withdrawal-Control
+- GDPR-A7-Withdrawal-As-Easy-As-Consent
+- GDPR-A7-Withdrawal-Always-Accessible
+
+Art. 21 – Right to object (often implemented alongside withdrawal, esp. marketing) (https://www.legislation.gov.uk/eur/2016/679/article/21)
+- GDPR-A21-Objection-Control-Available
+
+Art. 12 – Transparent information, communication and modalities (clear & accessible controls) (https://www.legislation.gov.uk/eur/2016/679/article/12)
+- GDPR-A12-Accessible-Notice-Presentation","- UI-Consent-Withdrawal-Available-Post-Agreement
+- UI-Withdrawal-Control-Persistently-Accessible
+- UI-Withdrawal-Effort-Comparable-To-Consent
+- UI-Clear-Withdrawal-Labeling
+- UI-Post-Withdrawal-State-Confirmed",Ensure ongoing control by allowing users to withdraw consent easily and persistently after initial agreement.,"Use whenever consent enables ongoing data processing; common in account settings, preference centers, and subscription-based services.","GDPR Art. 7(3); Utz et al., 2023 (CHI); ICO consent guidance",Requiring contact with support to withdraw; making withdrawal harder than consent; failing to confirm the post-withdrawal state.,"GDPR Art. 7(3); Utz et al., 2023 (CHI)",User control & freedom; Undo & redo,"Nielsen’s usability heuristics (Nielsen, 1994); interaction design theory on reversibility and recovery from actions (Norman, 2013); privacy law and usable privacy scholarship showing that consent is invalid if users cannot easily revise or withdraw decisions (Solove, 2013; Tsai et al., 2017).",Reversibility is required for valid consent. Consent is invalid if it cannot be easily revised.,"Withdrawal must be simple, persistent, and immediate.",Expose a persistent control in settings/preference center; label withdrawal clearly (‘withdraw consent’ / ‘turn off’); confirm changes; avoid extra friction compared to consenting.,Is withdrawal available after consent is given? Is the control persistently accessible and labeled clearly? Does withdrawal require no more steps than opting in? Is the post-withdrawal state confirmed and visible?

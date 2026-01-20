@@ -1,0 +1,1356 @@
+{
+  "meta": {
+    "schemaVersion": "0.1.0",
+    "generatedAt": "2026-01-20T03:19:29Z",
+    "source": {
+      "patternsCsv": "Privacy UI Library 2026 Thesis.xlsx - Privacy UI Library Design.csv",
+      "examplesCsv": "(Final) Privacy UI Library 2026 Thesis.xlsx - Privacy UI Examples.csv"
+    }
+  },
+  "patterns": [
+    {
+      "id": "pat-001",
+      "slug": "layered-privacy-notice",
+      "name": "Layered Privacy Notice",
+      "sortOrder": 1,
+      "definition": "Presents privacy information in progressive layers, beginning with a concise overview and allowing users to access deeper detail as needed.",
+      "goal": "Enable fast, accurate understanding of key privacy terms (data types, purposes, sharing, retention) without requiring full policy reading; support transparent notice delivery at appropriate moments.",
+      "gdprBasis": {
+        "raw": "Art. 12 – Transparent information, communication and modalities (https://www.legislation.gov.uk/eur/2016/679/article/12)\n- GDPR-A12-Plain-Language-Notice\n- GDPR-A12-Readable-Formatting\n- GDPR-A12-Accessible-Notice-Presentation\n\nArt. 13 – Information to be provided where personal data are collected from the data subject (https://www.legislation.gov.uk/eur/2016/679/article/13)\n- GDPR-A13-Data-Controller-Identified\n- GDPR-A13-Purpose-Explained-at-Collection\n- GDPR-A13-Recipient-Disclosure\n- GDPR-A13-Retention-Info-Provided\n- GDPR-A13-Rights-Explained-in-UI\n\nArt. 5 – Principles relating to processing of personal data (https://www.legislation.gov.uk/eur/2016/679/article/5)\n- GDPR-A5-Transparent-Data-Use-Explanation\n\nArt. 14 – Information to be provided where personal data have not been obtained from the data subject (conditional) (https://www.legislation.gov.uk/eur/2016/679/article/14)\n- GDPR-A14-Third-Party-Data-Source-Disclosed\n- GDPR-A14-Indirect-Collection-Explained",
+        "articles": [
+          {
+            "articleRef": "Art. 12",
+            "articleNumber": "12",
+            "title": "Transparent information, communication and modalities",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/12",
+            "gdprTagExpectations": [
+              "GDPR-A12-Plain-Language-Notice",
+              "GDPR-A12-Readable-Formatting",
+              "GDPR-A12-Accessible-Notice-Presentation"
+            ]
+          },
+          {
+            "articleRef": "Art. 13",
+            "articleNumber": "13",
+            "title": "Information to be provided where personal data are collected from the data subject",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/13",
+            "gdprTagExpectations": [
+              "GDPR-A13-Data-Controller-Identified",
+              "GDPR-A13-Purpose-Explained-at-Collection",
+              "GDPR-A13-Recipient-Disclosure",
+              "GDPR-A13-Retention-Info-Provided",
+              "GDPR-A13-Rights-Explained-in-UI"
+            ]
+          },
+          {
+            "articleRef": "Art. 5",
+            "articleNumber": "5",
+            "title": "Principles relating to processing of personal data",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/5",
+            "gdprTagExpectations": [
+              "GDPR-A5-Transparent-Data-Use-Explanation"
+            ]
+          },
+          {
+            "articleRef": "Art. 14",
+            "articleNumber": "14",
+            "title": "Information to be provided where personal data have not been obtained from the data subject (conditional)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/14",
+            "gdprTagExpectations": [
+              "GDPR-A14-Third-Party-Data-Source-Disclosed",
+              "GDPR-A14-Indirect-Collection-Explained"
+            ]
+          }
+        ],
+        "gdprTags": [
+          "GDPR-A12-Plain-Language-Notice",
+          "GDPR-A12-Readable-Formatting",
+          "GDPR-A12-Accessible-Notice-Presentation",
+          "GDPR-A13-Data-Controller-Identified",
+          "GDPR-A13-Purpose-Explained-at-Collection",
+          "GDPR-A13-Recipient-Disclosure",
+          "GDPR-A13-Retention-Info-Provided",
+          "GDPR-A13-Rights-Explained-in-UI",
+          "GDPR-A5-Transparent-Data-Use-Explanation",
+          "GDPR-A14-Third-Party-Data-Source-Disclosed",
+          "GDPR-A14-Indirect-Collection-Explained"
+        ]
+      },
+      "observableUiConditions": {
+        "raw": "- UI-Summary-Privacy-Overview-Present\n- UI-Standardized-Privacy-Categories\n- UI-Compact-Privacy-Format\n- UI-Visual-Separation-Summary-vs-Full\n- UI-Expandable-Privacy-Details\n- UI-Non-Legal-Language-Labels",
+        "uiEvidenceTags": [
+          "UI-Summary-Privacy-Overview-Present",
+          "UI-Standardized-Privacy-Categories",
+          "UI-Compact-Privacy-Format",
+          "UI-Visual-Separation-Summary-vs-Full",
+          "UI-Expandable-Privacy-Details",
+          "UI-Non-Legal-Language-Labels"
+        ]
+      },
+      "useCases": {
+        "raw": "Use when users must be informed about multiple data practices but are unlikely to read long policies; common in signup flows, consent dialogs, app settings, and policy entry points."
+      },
+      "evidence": {
+        "useCases": {
+          "raw": "Kelley et al., 2009 (SOUPS); EDPB guidance on transparency (Arts. 12–13)",
+          "citations": [
+            "Kelley et al., 2009 (SOUPS)",
+            "EDPB guidance on transparency (Arts. 12–13)"
+          ]
+        },
+        "pitfalls": {
+          "raw": "Kelley et al., 2009 (SOUPS); Nouwens et al., 2020 (CHI)",
+          "citations": [
+            "Kelley et al., 2009 (SOUPS)",
+            "Nouwens et al., 2020 (CHI)"
+          ]
+        }
+      },
+      "pitfalls": {
+        "raw": "Overloading the first layer with dense or legalistic text; omitting key purposes or recipients from the summary; placing critical information only in deep layers rarely accessed.",
+        "items": [
+          {
+            "id": "pat-001-pit-01",
+            "text": "Overloading the first layer with dense or legalistic text",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-001-pit-02",
+            "text": "omitting key purposes or recipients from the summary",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-001-pit-03",
+            "text": "placing critical information only in deep layers rarely accessed.",
+            "riskLevel": "medium"
+          }
+        ]
+      },
+      "heuristics": {
+        "considerationsRaw": "Recognition rather than recall; Aesthetic & minimalist design; Visibility of information",
+        "considerations": [
+          "Recognition rather than recall",
+          "Aesthetic & minimalist design",
+          "Visibility of information"
+        ],
+        "sourceRaw": "Nielsen’s usability heuristics (Nielsen, 1994; Nielsen, 1995); cognitive psychology on working-memory limits and cognitive load (Sweller, 1988; Sweller et al., 2011); information and document design research emphasizing hierarchy, scannability, and visual clarity (Tufte, 2001; Hartley, 1994).",
+        "whyTheseMatter": "Effectiveness depends on rapid comprehension and scannability. Privacy disclosures fail when users must read, recall, or interpret dense legal text. Recognition-based, visually structured information reduces cognitive load and improves comprehension."
+      },
+      "designGuidance": {
+        "keyDesignExpectationsAbstract": "Information must be scannable, hierarchically structured, and interpretable without requiring full policy reading.",
+        "designChoicesThatSupportHeuristics": "Use a standardized summary layout (rows/columns/icons), clear section headers, and progressive disclosure (‘learn more’) to manage cognitive load and support recognition over recall.",
+        "evaluativeQuestionsRaw": "Can a user identify: (1) what data is collected, (2) why, (3) who it’s shared with, (4) retention, and (5) key rights in under ~60 seconds? Is the full policy accessible from the summary? Is information presented in clear plain language?",
+        "evaluativeQuestions": [
+          "Can a user identify: (1) what data is collected, (2) why, (3) who it’s shared with, (4) retention, and (5) key rights in under ~60 seconds?",
+          "Is the full policy accessible from the summary?",
+          "Is information presented in clear plain language?"
+        ]
+      },
+      "exampleIds": [
+        "ex-001",
+        "ex-002",
+        "ex-003",
+        "ex-004",
+        "ex-005"
+      ]
+    },
+    {
+      "id": "pat-002",
+      "slug": "just-in-time-notice",
+      "name": "Just-in-Time Notice",
+      "sortOrder": 2,
+      "definition": "Provides contextual privacy information at the moment a user is about to provide data or enable a data-dependent feature.",
+      "goal": "Present privacy-relevant information at the moment of decision so users understand why a permission/data action is requested and can make an informed choice.",
+      "gdprBasis": {
+        "raw": "Art. 13 – Information to be provided where personal data are collected from the data subject (https://www.legislation.gov.uk/eur/2016/679/article/13)\n- GDPR-A13-Data-Use-Explained-at-Collection\n- GDPR-A13-Purpose-Explained-at-Collection\n\nArt. 12 – Transparent information, communication and modalities (https://www.legislation.gov.uk/eur/2016/679/article/12)\n- GDPR-A12-Accessible-Notice-Presentation\n\nArt. 5 – Principles relating to processing of personal data (https://www.legislation.gov.uk/eur/2016/679/article/5)\n- GDPR-A5-Data-Use-Visible-at-Collection\n- GDPR-A5-Transparent-Data-Use-Explanation\n\nArt. 7 – Conditions for consent (when the notice supports a consent decision) (https://www.legislation.gov.uk/eur/2016/679/article/7)\n- GDPR-A7-Clear-Distinguishable-Consent\n- GDPR-A7-Plain-Language-Consent-Copy",
+        "articles": [
+          {
+            "articleRef": "Art. 13",
+            "articleNumber": "13",
+            "title": "Information to be provided where personal data are collected from the data subject",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/13",
+            "gdprTagExpectations": [
+              "GDPR-A13-Data-Use-Explained-at-Collection",
+              "GDPR-A13-Purpose-Explained-at-Collection"
+            ]
+          },
+          {
+            "articleRef": "Art. 12",
+            "articleNumber": "12",
+            "title": "Transparent information, communication and modalities",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/12",
+            "gdprTagExpectations": [
+              "GDPR-A12-Accessible-Notice-Presentation"
+            ]
+          },
+          {
+            "articleRef": "Art. 5",
+            "articleNumber": "5",
+            "title": "Principles relating to processing of personal data",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/5",
+            "gdprTagExpectations": [
+              "GDPR-A5-Data-Use-Visible-at-Collection",
+              "GDPR-A5-Transparent-Data-Use-Explanation"
+            ]
+          },
+          {
+            "articleRef": "Art. 7",
+            "articleNumber": "7",
+            "title": "Conditions for consent (when the notice supports a consent decision)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/7",
+            "gdprTagExpectations": [
+              "GDPR-A7-Clear-Distinguishable-Consent",
+              "GDPR-A7-Plain-Language-Consent-Copy"
+            ]
+          }
+        ],
+        "gdprTags": [
+          "GDPR-A13-Data-Use-Explained-at-Collection",
+          "GDPR-A13-Purpose-Explained-at-Collection",
+          "GDPR-A12-Accessible-Notice-Presentation",
+          "GDPR-A5-Data-Use-Visible-at-Collection",
+          "GDPR-A5-Transparent-Data-Use-Explanation",
+          "GDPR-A7-Clear-Distinguishable-Consent",
+          "GDPR-A7-Plain-Language-Consent-Copy"
+        ]
+      },
+      "observableUiConditions": {
+        "raw": "- UI-Notice-Timed-at-Data-Request\n- UI-Context-Specific-Permission-Explanation\n- UI-Purpose-Explained-In-Action\n- UI-Permission-Request-Unbundled\n- UI-Decline-Option-Available\n- UI-Feature-Access-Not-Blocked-On-Decline",
+        "uiEvidenceTags": [
+          "UI-Notice-Timed-at-Data-Request",
+          "UI-Context-Specific-Permission-Explanation",
+          "UI-Purpose-Explained-In-Action",
+          "UI-Permission-Request-Unbundled",
+          "UI-Decline-Option-Available",
+          "UI-Feature-Access-Not-Blocked-On-Decline"
+        ]
+      },
+      "useCases": {
+        "raw": "Use when requesting permissions, sensitive inputs, or non-obvious data uses—especially during onboarding, first-time feature use, or permission prompts where timing affects comprehension."
+      },
+      "evidence": {
+        "useCases": {
+          "raw": "Balebako et al., 2014 (SOUPS); Fang et al., 2022 (CHI); ICO/EDPB transparency guidance",
+          "citations": [
+            "Balebako et al., 2014 (SOUPS)",
+            "Fang et al., 2022 (CHI)",
+            "ICO/EDPB transparency guidance"
+          ]
+        },
+        "pitfalls": {
+          "raw": "Balebako et al., 2014 (SOUPS); Fang et al., 2022 (CHI)",
+          "citations": [
+            "Balebako et al., 2014 (SOUPS)",
+            "Fang et al., 2022 (CHI)"
+          ]
+        }
+      },
+      "pitfalls": {
+        "raw": "Displaying notices after data collection has occurred; using generic explanations unrelated to the action; bundling multiple permissions into a single notice.",
+        "items": [
+          {
+            "id": "pat-002-pit-01",
+            "text": "Displaying notices after data collection has occurred",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-002-pit-02",
+            "text": "using generic explanations unrelated to the action",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-002-pit-03",
+            "text": "bundling multiple permissions into a single notice.",
+            "riskLevel": "medium"
+          }
+        ]
+      },
+      "heuristics": {
+        "considerationsRaw": "Match between system & real world; Visibility of system status; Error prevention",
+        "considerations": [
+          "Match between system & real world",
+          "Visibility of system status",
+          "Error prevention"
+        ],
+        "sourceRaw": "Nielsen’s usability heuristics (Nielsen, 1994); human-factors and situated interaction theory showing that meaning and understanding depend on context and timing (Norman, 2013; Dourish, 2001); usable privacy research demonstrating that untimely or hidden disclosures lead to misunderstanding or unintended actions (Schaub et al., 2015).",
+        "whyTheseMatter": "Timing and contextual relevance drive observed effects. Privacy meaning is context-dependent. Disclosures detached from action are ignored or misunderstood."
+      },
+      "designGuidance": {
+        "keyDesignExpectationsAbstract": "Notices must appear at the moment of decision and be clearly linked to the triggering action.",
+        "designChoicesThatSupportHeuristics": "Trigger the explanation immediately before the permission prompt; tie wording to the user’s current goal (‘to do X, we need Y’); provide a clear decline path and avoid bundling.",
+        "evaluativeQuestionsRaw": "Does the notice appear at the exact decision moment? Is it clearly tied to the triggering action? Does it state the data type and purpose in user language? Can the user decline without unrelated feature lockout?",
+        "evaluativeQuestions": [
+          "Does the notice appear at the exact decision moment?",
+          "Is it clearly tied to the triggering action?",
+          "Does it state the data type and purpose in user language?",
+          "Can the user decline without unrelated feature lockout?"
+        ]
+      },
+      "exampleIds": [
+        "ex-006",
+        "ex-007",
+        "ex-008",
+        "ex-009",
+        "ex-010",
+        "ex-011"
+      ]
+    },
+    {
+      "id": "pat-003",
+      "slug": "granular-consent-controls",
+      "name": "Granular Consent Controls",
+      "sortOrder": 3,
+      "definition": "Enables users to make separate, independent consent decisions for distinct purposes of data processing rather than a single bundled choice.",
+      "goal": "Allow users to consent (or not) to discrete purposes independently so consent is specific, granular, and reversible.",
+      "gdprBasis": {
+        "raw": "Art. 7 – Conditions for consent (https://www.legislation.gov.uk/eur/2016/679/article/7)\n- GDPR-A7-Granular-Consent-Options\n- GDPR-A7-No-Preselected-Consent\n- GDPR-A7-Explicit-Affirmative-Action\n- GDPR-A7-Consent-Visually-Distinct\n\nArt. 5 – Principles relating to processing of personal data (https://www.legislation.gov.uk/eur/2016/679/article/5)\n- GDPR-A5-Purpose-Specific-Consent-Options\n- GDPR-A5-Purpose-Separated-Controls\n- GDPR-A5-Purpose-Explained-in-Context\n\nArt. 6 – Lawfulness of processing (basis signalling per purpose) (https://www.legislation.gov.uk/eur/2016/679/article/6)\n- GDPR-A6-Processing-Basis-Explained",
+        "articles": [
+          {
+            "articleRef": "Art. 7",
+            "articleNumber": "7",
+            "title": "Conditions for consent",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/7",
+            "gdprTagExpectations": [
+              "GDPR-A7-Granular-Consent-Options",
+              "GDPR-A7-No-Preselected-Consent",
+              "GDPR-A7-Explicit-Affirmative-Action",
+              "GDPR-A7-Consent-Visually-Distinct"
+            ]
+          },
+          {
+            "articleRef": "Art. 5",
+            "articleNumber": "5",
+            "title": "Principles relating to processing of personal data",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/5",
+            "gdprTagExpectations": [
+              "GDPR-A5-Purpose-Specific-Consent-Options",
+              "GDPR-A5-Purpose-Separated-Controls",
+              "GDPR-A5-Purpose-Explained-in-Context"
+            ]
+          },
+          {
+            "articleRef": "Art. 6",
+            "articleNumber": "6",
+            "title": "Lawfulness of processing (basis signalling per purpose)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/6",
+            "gdprTagExpectations": [
+              "GDPR-A6-Processing-Basis-Explained"
+            ]
+          }
+        ],
+        "gdprTags": [
+          "GDPR-A7-Granular-Consent-Options",
+          "GDPR-A7-No-Preselected-Consent",
+          "GDPR-A7-Explicit-Affirmative-Action",
+          "GDPR-A7-Consent-Visually-Distinct",
+          "GDPR-A5-Purpose-Specific-Consent-Options",
+          "GDPR-A5-Purpose-Separated-Controls",
+          "GDPR-A5-Purpose-Explained-in-Context",
+          "GDPR-A6-Processing-Basis-Explained"
+        ]
+      },
+      "observableUiConditions": {
+        "raw": "- UI-Purposes-Named-in-User-Language\n- UI-One-Control-Per-Purpose\n- UI-No-All-Or-Nothing-Consent\n- UI-Consent-State-Visible\n- UI-Purpose-Controls-Independently-Changeable",
+        "uiEvidenceTags": [
+          "UI-Purposes-Named-in-User-Language",
+          "UI-One-Control-Per-Purpose",
+          "UI-No-All-Or-Nothing-Consent",
+          "UI-Consent-State-Visible",
+          "UI-Purpose-Controls-Independently-Changeable"
+        ]
+      },
+      "useCases": {
+        "raw": "Use when data is processed for multiple purposes (e.g., analytics, personalization, marketing); common in cookie preference panels, onboarding consent flows, and privacy settings."
+      },
+      "evidence": {
+        "useCases": {
+          "raw": "Nouwens et al., 2020 (CHI); Utz et al., 2019 & 2023 (CHI); GDPR Art. 7 interpretations",
+          "citations": [
+            "Nouwens et al., 2020 (CHI)",
+            "Utz et al., 2019 & 2023 (CHI)",
+            "GDPR Art. 7 interpretations"
+          ]
+        },
+        "pitfalls": {
+          "raw": "Nouwens et al., 2020 (CHI); Utz et al., 2023 (CHI)",
+          "citations": [
+            "Nouwens et al., 2020 (CHI)",
+            "Utz et al., 2023 (CHI)"
+          ]
+        }
+      },
+      "pitfalls": {
+        "raw": "Grouping multiple purposes under one toggle; using vague or technical purpose labels; offering granularity only after initial acceptance.",
+        "items": [
+          {
+            "id": "pat-003-pit-01",
+            "text": "Grouping multiple purposes under one toggle",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-003-pit-02",
+            "text": "using vague or technical purpose labels",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-003-pit-03",
+            "text": "offering granularity only after initial acceptance.",
+            "riskLevel": "medium"
+          }
+        ]
+      },
+      "heuristics": {
+        "considerationsRaw": "User control & freedom; Error prevention",
+        "considerations": [
+          "User control & freedom",
+          "Error prevention"
+        ],
+        "sourceRaw": "Nielsen’s usability heuristics (Nielsen, 1994); interaction design theory emphasizing reversible actions and avoidance of irreversible user errors (Norman, 2013); behavioral decision-making research showing that interface constraints and friction affect voluntariness and choice quality (Thaler & Sunstein, 2008).",
+        "whyTheseMatter": "Independent choices prevent accidental or bundled consent. Bundled consent obscures user intent and increases accidental agreement."
+      },
+      "designGuidance": {
+        "keyDesignExpectationsAbstract": "Each purpose must be independently actionable and understandable.",
+        "designChoicesThatSupportHeuristics": "Name purposes in user language; provide one toggle per purpose; avoid ‘accept all’ as the only clear path; keep state visible; support independent changes at any time.",
+        "evaluativeQuestionsRaw": "Are purposes separated into independent choices? Are toggles unbundled and understandable? Is any consent preselected? Can a user enable one purpose while disabling another with immediate feedback?",
+        "evaluativeQuestions": [
+          "Are purposes separated into independent choices?",
+          "Are toggles unbundled and understandable?",
+          "Is any consent preselected?",
+          "Can a user enable one purpose while disabling another with immediate feedback?"
+        ]
+      },
+      "exampleIds": [
+        "ex-012",
+        "ex-013",
+        "ex-014",
+        "ex-015"
+      ]
+    },
+    {
+      "id": "pat-004",
+      "slug": "equal-accept-reject",
+      "name": "Equal Accept / Reject",
+      "sortOrder": 4,
+      "definition": "Presents acceptance and rejection options with equal visual prominence, interaction cost, and neutral framing to avoid biasing consent decisions.",
+      "goal": "Ensure consent is freely actionable in the interface by preventing biased choice presentation and reducing coercive or asymmetric friction.",
+      "gdprBasis": {
+        "raw": "Art. 7 – Conditions for consent (https://www.legislation.gov.uk/eur/2016/679/article/7)\n- GDPR-A7-Equal-Prominence-Accept-Reject\n- GDPR-A7-Consent-Separate-from-Terms\n- GDPR-A7-Consent-Visually-Distinct\n\nArt. 12 – Transparent information, communication and modalities (https://www.legislation.gov.uk/eur/2016/679/article/12)\n- GDPR-A12-Readable-Formatting\n\nArt. 5 – Principles relating to processing of personal data (https://www.legislation.gov.uk/eur/2016/679/article/5)\n- GDPR-A5-No-Hidden-Processing-UI",
+        "articles": [
+          {
+            "articleRef": "Art. 7",
+            "articleNumber": "7",
+            "title": "Conditions for consent",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/7",
+            "gdprTagExpectations": [
+              "GDPR-A7-Equal-Prominence-Accept-Reject",
+              "GDPR-A7-Consent-Separate-from-Terms",
+              "GDPR-A7-Consent-Visually-Distinct"
+            ]
+          },
+          {
+            "articleRef": "Art. 12",
+            "articleNumber": "12",
+            "title": "Transparent information, communication and modalities",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/12",
+            "gdprTagExpectations": [
+              "GDPR-A12-Readable-Formatting"
+            ]
+          },
+          {
+            "articleRef": "Art. 5",
+            "articleNumber": "5",
+            "title": "Principles relating to processing of personal data",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/5",
+            "gdprTagExpectations": [
+              "GDPR-A5-No-Hidden-Processing-UI"
+            ]
+          }
+        ],
+        "gdprTags": [
+          "GDPR-A7-Equal-Prominence-Accept-Reject",
+          "GDPR-A7-Consent-Separate-from-Terms",
+          "GDPR-A7-Consent-Visually-Distinct",
+          "GDPR-A12-Readable-Formatting",
+          "GDPR-A5-No-Hidden-Processing-UI"
+        ]
+      },
+      "observableUiConditions": {
+        "raw": "- UI-Accept-Reject-Visual-Symmetry\n- UI-Accept-Reject-Equal-Interaction-Cost\n- UI-Reject-Option-Immediately-Visible\n- UI-Neutral-Consent-Copy\n- UI-No-Visual-Bias-Toward-Accept",
+        "uiEvidenceTags": [
+          "UI-Accept-Reject-Visual-Symmetry",
+          "UI-Accept-Reject-Equal-Interaction-Cost",
+          "UI-Reject-Option-Immediately-Visible",
+          "UI-Neutral-Consent-Copy",
+          "UI-No-Visual-Bias-Toward-Accept"
+        ]
+      },
+      "useCases": {
+        "raw": "Use whenever consent is optional and refusal must be a genuine choice, such as cookie banners, data-sharing prompts, and marketing opt-ins—particularly in regulated contexts."
+      },
+      "evidence": {
+        "useCases": {
+          "raw": "Nouwens et al., 2020 (CHI); EDPB dark pattern guidance",
+          "citations": [
+            "Nouwens et al., 2020 (CHI)",
+            "EDPB dark pattern guidance"
+          ]
+        },
+        "pitfalls": {
+          "raw": "Nouwens et al., 2020 (CHI); Mathur et al., 2019; EDPB guidance",
+          "citations": [
+            "Nouwens et al., 2020 (CHI)",
+            "Mathur et al., 2019",
+            "EDPB guidance"
+          ]
+        }
+      },
+      "pitfalls": {
+        "raw": "Visually emphasizing “Accept” over “Reject”; requiring extra steps to reject; using emotionally loaded or fear-based language.",
+        "items": [
+          {
+            "id": "pat-004-pit-01",
+            "text": "Visually emphasizing “Accept” over “Reject”",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-004-pit-02",
+            "text": "requiring extra steps to reject",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-004-pit-03",
+            "text": "using emotionally loaded or fear-based language.",
+            "riskLevel": "medium"
+          }
+        ]
+      },
+      "heuristics": {
+        "considerationsRaw": "User control & freedom; Error prevention",
+        "considerations": [
+          "User control & freedom",
+          "Error prevention"
+        ],
+        "sourceRaw": "(Nielsen, 1994; Norman, 2013), reinforced by usable privacy and dark-pattern research showing that asymmetric or coercive interfaces undermine meaningful choice and lead to unintentional consent (Gray et al., 2018; Nouwens et al., 2020).",
+        "whyTheseMatter": "Symmetry prevents coerced or biased decisions. Asymmetry introduces bias and undermines voluntariness."
+      },
+      "designGuidance": {
+        "keyDesignExpectationsAbstract": "Accept and reject options must be equally visible and actionable.",
+        "designChoicesThatSupportHeuristics": "Use symmetric button styling and placement; keep Reject on the first layer; avoid guilt/urgency language; ensure decline does not require extra steps compared to accept.",
+        "evaluativeQuestionsRaw": "Are Accept and Reject equally prominent (size, color emphasis, placement)? Is Reject immediately available without extra clicks? Is copy neutral? Is the consent request clearly separated from other content (e.g., Terms)?",
+        "evaluativeQuestions": [
+          "Are Accept and Reject equally prominent (size, color emphasis, placement)?",
+          "Is Reject immediately available without extra clicks?",
+          "Is copy neutral?",
+          "Is the consent request clearly separated from other content (e.g., Terms)?"
+        ]
+      },
+      "exampleIds": [
+        "ex-016",
+        "ex-017",
+        "ex-018",
+        "ex-019"
+      ]
+    },
+    {
+      "id": "pat-005",
+      "slug": "preference-center",
+      "name": "Preference Center",
+      "sortOrder": 5,
+      "definition": "A centralized interface that allows users to view and manage privacy and data-related preferences over time.",
+      "goal": "Provide a stable, centralized place for users to view and manage privacy preferences and exercise data-subject rights.",
+      "gdprBasis": {
+        "raw": "Art. 12 – Transparent information, communication and modalities (supporting rights exercise UX) (https://www.legislation.gov.uk/eur/2016/679/article/12)\n- GDPR-A12-Accessible-Notice-Presentation\n\nArt. 15 – Right of access by the data subject (https://www.legislation.gov.uk/eur/2016/679/article/15)\n- GDPR-A15-Data-Access-Entry-Point\n- GDPR-A15-View-Personal-Data-UI\n- GDPR-A15-Processing-Overview-Visible\n\nArt. 16 – Right to rectification (https://www.legislation.gov.uk/eur/2016/679/article/16)\n- GDPR-A16-Editable-Personal-Data\n- GDPR-A16-Update-Data-Flow-Available\n\nArt. 17 – Right to erasure (https://www.legislation.gov.uk/eur/2016/679/article/17)\n- GDPR-A17-Delete-Data-Request-UI\n- GDPR-A17-Account-Deletion-Path-Visible\n- GDPR-A17-Deletion-Scope-Explained\n\nArt. 18 – Right to restriction of processing (https://www.legislation.gov.uk/eur/2016/679/article/18)\n- GDPR-A18-Processing-Restriction-Option\n- GDPR-A18-Restricted-State-Explained\n\nArt. 20 – Right to data portability (https://www.legislation.gov.uk/eur/2016/679/article/20)\n- GDPR-A20-Data-Export-Available\n- GDPR-A20-Machine-Readable-Download\n- GDPR-A20-Portability-Explained\n\nArt. 21 – Right to object (https://www.legislation.gov.uk/eur/2016/679/article/21)\n- GDPR-A21-Objection-Control-Available\n- GDPR-A21-Direct-Marketing-Opt-Out\n\nArt. 7 – Conditions for consent (if consent preferences live here) (https://www.legislation.gov.uk/eur/2016/679/article/7)\n- GDPR-A7-Persistent-Consent-Withdrawal-Control",
+        "articles": [
+          {
+            "articleRef": "Art. 12",
+            "articleNumber": "12",
+            "title": "Transparent information, communication and modalities (supporting rights exercise UX)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/12",
+            "gdprTagExpectations": [
+              "GDPR-A12-Accessible-Notice-Presentation"
+            ]
+          },
+          {
+            "articleRef": "Art. 15",
+            "articleNumber": "15",
+            "title": "Right of access by the data subject",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/15",
+            "gdprTagExpectations": [
+              "GDPR-A15-Data-Access-Entry-Point",
+              "GDPR-A15-View-Personal-Data-UI",
+              "GDPR-A15-Processing-Overview-Visible"
+            ]
+          },
+          {
+            "articleRef": "Art. 16",
+            "articleNumber": "16",
+            "title": "Right to rectification",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/16",
+            "gdprTagExpectations": [
+              "GDPR-A16-Editable-Personal-Data",
+              "GDPR-A16-Update-Data-Flow-Available"
+            ]
+          },
+          {
+            "articleRef": "Art. 17",
+            "articleNumber": "17",
+            "title": "Right to erasure",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/17",
+            "gdprTagExpectations": [
+              "GDPR-A17-Delete-Data-Request-UI",
+              "GDPR-A17-Account-Deletion-Path-Visible",
+              "GDPR-A17-Deletion-Scope-Explained"
+            ]
+          },
+          {
+            "articleRef": "Art. 18",
+            "articleNumber": "18",
+            "title": "Right to restriction of processing",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/18",
+            "gdprTagExpectations": [
+              "GDPR-A18-Processing-Restriction-Option",
+              "GDPR-A18-Restricted-State-Explained"
+            ]
+          },
+          {
+            "articleRef": "Art. 20",
+            "articleNumber": "20",
+            "title": "Right to data portability",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/20",
+            "gdprTagExpectations": [
+              "GDPR-A20-Data-Export-Available",
+              "GDPR-A20-Machine-Readable-Download",
+              "GDPR-A20-Portability-Explained"
+            ]
+          },
+          {
+            "articleRef": "Art. 21",
+            "articleNumber": "21",
+            "title": "Right to object",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/21",
+            "gdprTagExpectations": [
+              "GDPR-A21-Objection-Control-Available",
+              "GDPR-A21-Direct-Marketing-Opt-Out"
+            ]
+          },
+          {
+            "articleRef": "Art. 7",
+            "articleNumber": "7",
+            "title": "Conditions for consent (if consent preferences live here)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/7",
+            "gdprTagExpectations": [
+              "GDPR-A7-Persistent-Consent-Withdrawal-Control"
+            ]
+          }
+        ],
+        "gdprTags": [
+          "GDPR-A12-Accessible-Notice-Presentation",
+          "GDPR-A15-Data-Access-Entry-Point",
+          "GDPR-A15-View-Personal-Data-UI",
+          "GDPR-A15-Processing-Overview-Visible",
+          "GDPR-A16-Editable-Personal-Data",
+          "GDPR-A16-Update-Data-Flow-Available",
+          "GDPR-A17-Delete-Data-Request-UI",
+          "GDPR-A17-Account-Deletion-Path-Visible",
+          "GDPR-A17-Deletion-Scope-Explained",
+          "GDPR-A18-Processing-Restriction-Option",
+          "GDPR-A18-Restricted-State-Explained",
+          "GDPR-A20-Data-Export-Available",
+          "GDPR-A20-Machine-Readable-Download",
+          "GDPR-A20-Portability-Explained",
+          "GDPR-A21-Objection-Control-Available",
+          "GDPR-A21-Direct-Marketing-Opt-Out",
+          "GDPR-A7-Persistent-Consent-Withdrawal-Control"
+        ]
+      },
+      "observableUiConditions": {
+        "raw": "- UI-Dedicated-Privacy-Entry-Point\n- UI-Privacy-Controls-Centralized\n- UI-Data-Visibility-Present\n- UI-Preferences-Editable-Post-Onboarding\n- UI-Logical-Grouping-of-Privacy-Controls",
+        "uiEvidenceTags": [
+          "UI-Dedicated-Privacy-Entry-Point",
+          "UI-Privacy-Controls-Centralized",
+          "UI-Data-Visibility-Present",
+          "UI-Preferences-Editable-Post-Onboarding",
+          "UI-Logical-Grouping-of-Privacy-Controls"
+        ]
+      },
+      "useCases": {
+        "raw": "Use when users need ongoing control beyond initial consent, especially in products with persistent accounts, long-term data use, or multiple configurable preferences."
+      },
+      "evidence": {
+        "useCases": {
+          "raw": "Utz et al., 2019 (CHI); Utz et al., 2023 (CHI)",
+          "citations": [
+            "Utz et al., 2019 (CHI)",
+            "Utz et al., 2023 (CHI)"
+          ]
+        },
+        "pitfalls": {
+          "raw": "Utz et al., 2019 (CHI); Fang et al., 2022 (CHI)",
+          "citations": [
+            "Utz et al., 2019 (CHI)",
+            "Fang et al., 2022 (CHI)"
+          ]
+        }
+      },
+      "pitfalls": {
+        "raw": "Scattering controls across multiple screens; making the center hard to find post-onboarding; allowing viewing without meaningful control.",
+        "items": [
+          {
+            "id": "pat-005-pit-01",
+            "text": "Scattering controls across multiple screens",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-005-pit-02",
+            "text": "making the center hard to find post-onboarding",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-005-pit-03",
+            "text": "allowing viewing without meaningful control.",
+            "riskLevel": "medium"
+          }
+        ]
+      },
+      "heuristics": {
+        "considerationsRaw": "Recognition rather than recall; Consistency & standards; User control & freedom",
+        "considerations": [
+          "Recognition rather than recall",
+          "Consistency & standards",
+          "User control & freedom"
+        ],
+        "sourceRaw": "Nielsen’s usability heuristics (Nielsen, 1994); mental-model and consistency research showing that predictable, centralized controls reduce cognitive effort and support user agency (Norman, 2013); privacy self-management literature highlighting the need for stable, recognizable control locations (Solove, 2013; Tsai et al., 2017).",
+        "whyTheseMatter": "Centralization enables ongoing rights exercise. Fragmented controls prevent effective privacy self-management."
+      },
+      "designGuidance": {
+        "keyDesignExpectationsAbstract": "Controls must be centralized, consistent, and persistently accessible.",
+        "designChoicesThatSupportHeuristics": "Provide a clearly labeled entry point (Settings → Privacy); group controls logically; show current states; include actionable links for access/edit/export/delete; confirm changes.",
+        "evaluativeQuestionsRaw": "Can users find privacy controls within ~2–3 steps? Are preferences centralized (not scattered)? Can users view their data and understand key processing categories? Are export/delete/restriction actions discoverable and explained?",
+        "evaluativeQuestions": [
+          "Can users find privacy controls within ~2–3 steps?",
+          "Are preferences centralized (not scattered)?",
+          "Can users view their data and understand key processing categories?",
+          "Are export/delete/restriction actions discoverable and explained?"
+        ]
+      },
+      "exampleIds": [
+        "ex-020",
+        "ex-021",
+        "ex-022",
+        "ex-023"
+      ]
+    },
+    {
+      "id": "pat-006",
+      "slug": "privacy-protective-defaults",
+      "name": "Privacy-Protective Defaults",
+      "sortOrder": 6,
+      "definition": "Sets non-essential data processing to OFF by default, requiring affirmative user action to enable it.",
+      "goal": "Reduce unintended processing by ensuring the default state is privacy-protective and non-essential processing requires opt-in.",
+      "gdprBasis": {
+        "raw": "Art. 25 – Data protection by design and by default (https://www.legislation.gov.uk/eur/2016/679/article/25)\n- GDPR-A25-Privacy-Protective-Defaults\n- GDPR-A25-Non-Essential-Processing-Off-by-Default\n- GDPR-A25-User-Control-Prioritized\n\nArt. 7 – Conditions for consent (pre-ticked / pre-enabled settings) (https://www.legislation.gov.uk/eur/2016/679/article/7)\n- GDPR-A7-No-Preselected-Consent\n\nArt. 5 – Principles relating to processing of personal data (minimization / proportionality cues) (https://www.legislation.gov.uk/eur/2016/679/article/5)\n- GDPR-A5-Optional-Data-Clearly-Marked\n- GDPR-A5-Non-Essential-Fields-Distinguished",
+        "articles": [
+          {
+            "articleRef": "Art. 25",
+            "articleNumber": "25",
+            "title": "Data protection by design and by default",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/25",
+            "gdprTagExpectations": [
+              "GDPR-A25-Privacy-Protective-Defaults",
+              "GDPR-A25-Non-Essential-Processing-Off-by-Default",
+              "GDPR-A25-User-Control-Prioritized"
+            ]
+          },
+          {
+            "articleRef": "Art. 7",
+            "articleNumber": "7",
+            "title": "Conditions for consent (pre-ticked / pre-enabled settings)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/7",
+            "gdprTagExpectations": [
+              "GDPR-A7-No-Preselected-Consent"
+            ]
+          },
+          {
+            "articleRef": "Art. 5",
+            "articleNumber": "5",
+            "title": "Principles relating to processing of personal data (minimization / proportionality cues)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/5",
+            "gdprTagExpectations": [
+              "GDPR-A5-Optional-Data-Clearly-Marked",
+              "GDPR-A5-Non-Essential-Fields-Distinguished"
+            ]
+          }
+        ],
+        "gdprTags": [
+          "GDPR-A25-Privacy-Protective-Defaults",
+          "GDPR-A25-Non-Essential-Processing-Off-by-Default",
+          "GDPR-A25-User-Control-Prioritized",
+          "GDPR-A7-No-Preselected-Consent",
+          "GDPR-A5-Optional-Data-Clearly-Marked",
+          "GDPR-A5-Non-Essential-Fields-Distinguished"
+        ]
+      },
+      "observableUiConditions": {
+        "raw": "- UI-Non-Essential-Processing-Off-By-Default\n- UI-Default-State-Visible\n- UI-Affirmative-Action-Required-To-Enable\n- UI-Defaults-Consistent-Across-Flows\n- UI-Default-Choices-Reversible",
+        "uiEvidenceTags": [
+          "UI-Non-Essential-Processing-Off-By-Default",
+          "UI-Default-State-Visible",
+          "UI-Affirmative-Action-Required-To-Enable",
+          "UI-Defaults-Consistent-Across-Flows",
+          "UI-Default-Choices-Reversible"
+        ]
+      },
+      "useCases": {
+        "raw": "Use during first-run experiences, initial consent dialogs, and feature opt-ins, particularly when users may rush decisions influenced by defaults."
+      },
+      "evidence": {
+        "useCases": {
+          "raw": "Utz et al., 2019 (CHI); GDPR Art. 25 (PbD & by default)",
+          "citations": [
+            "Utz et al., 2019 (CHI)",
+            "GDPR Art. 25 (PbD & by default)"
+          ]
+        },
+        "pitfalls": {
+          "raw": "Utz et al., 2019 (CHI); Nouwens et al., 2020 (CHI)",
+          "citations": [
+            "Utz et al., 2019 (CHI)",
+            "Nouwens et al., 2020 (CHI)"
+          ]
+        }
+      },
+      "pitfalls": {
+        "raw": "Enabling non-essential processing by default; re-enabling processing after updates; defaults contradicting prior user choices.",
+        "items": [
+          {
+            "id": "pat-006-pit-01",
+            "text": "Enabling non-essential processing by default",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-006-pit-02",
+            "text": "re-enabling processing after updates",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-006-pit-03",
+            "text": "defaults contradicting prior user choices.",
+            "riskLevel": "medium"
+          }
+        ]
+      },
+      "heuristics": {
+        "considerationsRaw": "Error prevention; Visibility of system status",
+        "considerations": [
+          "Error prevention",
+          "Visibility of system status"
+        ],
+        "sourceRaw": "Nielsen’s usability heuristics (Nielsen, 1994); behavioral economics research on default effects and status-quo bias demonstrating that unseen defaults strongly shape behavior (Johnson & Goldstein, 2003; Acquisti et al., 2017); privacy-by-design principles emphasizing proactive protection (Cavoukian, 2011).",
+        "whyTheseMatter": "Defaults shape behavior even without active choice. Users rarely change defaults; hidden defaults function as de facto consent."
+      },
+      "designGuidance": {
+        "keyDesignExpectationsAbstract": "Non-essential processing must be off by default and visible.",
+        "designChoicesThatSupportHeuristics": "Set non-essential processing OFF; make default state visible; require affirmative action to enable; persist choices consistently; provide easy reversal.",
+        "evaluativeQuestionsRaw": "Are non-essential settings OFF by default? Is the default visible without interaction? Does enabling require an affirmative action? Are defaults consistent across entry points and reversible with clear state feedback?",
+        "evaluativeQuestions": [
+          "Are non-essential settings OFF by default?",
+          "Is the default visible without interaction?",
+          "Does enabling require an affirmative action?",
+          "Are defaults consistent across entry points and reversible with clear state feedback?"
+        ]
+      },
+      "exampleIds": [
+        "ex-024",
+        "ex-025"
+      ]
+    },
+    {
+      "id": "pat-007",
+      "slug": "consent-withdrawal-mechanism",
+      "name": "Consent Withdrawal Mechanism",
+      "sortOrder": 7,
+      "definition": "Ensures users can withdraw previously given consent easily and at any time using discoverable, low-friction controls.",
+      "goal": "Ensure ongoing control by allowing users to withdraw consent easily and persistently after initial agreement.",
+      "gdprBasis": {
+        "raw": "Art. 7 – Conditions for consent (withdrawal) (https://www.legislation.gov.uk/eur/2016/679/article/7)\n- GDPR-A7-Persistent-Consent-Withdrawal-Control\n- GDPR-A7-Withdrawal-As-Easy-As-Consent\n- GDPR-A7-Withdrawal-Always-Accessible\n\nArt. 21 – Right to object (often implemented alongside withdrawal, esp. marketing) (https://www.legislation.gov.uk/eur/2016/679/article/21)\n- GDPR-A21-Objection-Control-Available\n\nArt. 12 – Transparent information, communication and modalities (clear & accessible controls) (https://www.legislation.gov.uk/eur/2016/679/article/12)\n- GDPR-A12-Accessible-Notice-Presentation",
+        "articles": [
+          {
+            "articleRef": "Art. 7",
+            "articleNumber": "7",
+            "title": "Conditions for consent (withdrawal)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/7",
+            "gdprTagExpectations": [
+              "GDPR-A7-Persistent-Consent-Withdrawal-Control",
+              "GDPR-A7-Withdrawal-As-Easy-As-Consent",
+              "GDPR-A7-Withdrawal-Always-Accessible"
+            ]
+          },
+          {
+            "articleRef": "Art. 21",
+            "articleNumber": "21",
+            "title": "Right to object (often implemented alongside withdrawal, esp. marketing)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/21",
+            "gdprTagExpectations": [
+              "GDPR-A21-Objection-Control-Available"
+            ]
+          },
+          {
+            "articleRef": "Art. 12",
+            "articleNumber": "12",
+            "title": "Transparent information, communication and modalities (clear & accessible controls)",
+            "url": "https://www.legislation.gov.uk/eur/2016/679/article/12",
+            "gdprTagExpectations": [
+              "GDPR-A12-Accessible-Notice-Presentation"
+            ]
+          }
+        ],
+        "gdprTags": [
+          "GDPR-A7-Persistent-Consent-Withdrawal-Control",
+          "GDPR-A7-Withdrawal-As-Easy-As-Consent",
+          "GDPR-A7-Withdrawal-Always-Accessible",
+          "GDPR-A21-Objection-Control-Available",
+          "GDPR-A12-Accessible-Notice-Presentation"
+        ]
+      },
+      "observableUiConditions": {
+        "raw": "- UI-Consent-Withdrawal-Available-Post-Agreement\n- UI-Withdrawal-Control-Persistently-Accessible\n- UI-Withdrawal-Effort-Comparable-To-Consent\n- UI-Clear-Withdrawal-Labeling\n- UI-Post-Withdrawal-State-Confirmed",
+        "uiEvidenceTags": [
+          "UI-Consent-Withdrawal-Available-Post-Agreement",
+          "UI-Withdrawal-Control-Persistently-Accessible",
+          "UI-Withdrawal-Effort-Comparable-To-Consent",
+          "UI-Clear-Withdrawal-Labeling",
+          "UI-Post-Withdrawal-State-Confirmed"
+        ]
+      },
+      "useCases": {
+        "raw": "Use whenever consent enables ongoing data processing; common in account settings, preference centers, and subscription-based services."
+      },
+      "evidence": {
+        "useCases": {
+          "raw": "GDPR Art. 7(3); Utz et al., 2023 (CHI); ICO consent guidance",
+          "citations": [
+            "GDPR Art. 7(3)",
+            "Utz et al., 2023 (CHI)",
+            "ICO consent guidance"
+          ]
+        },
+        "pitfalls": {
+          "raw": "GDPR Art. 7(3); Utz et al., 2023 (CHI)",
+          "citations": [
+            "GDPR Art. 7(3)",
+            "Utz et al., 2023 (CHI)"
+          ]
+        }
+      },
+      "pitfalls": {
+        "raw": "Requiring contact with support to withdraw; making withdrawal harder than consent; failing to confirm the post-withdrawal state.",
+        "items": [
+          {
+            "id": "pat-007-pit-01",
+            "text": "Requiring contact with support to withdraw",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-007-pit-02",
+            "text": "making withdrawal harder than consent",
+            "riskLevel": "medium"
+          },
+          {
+            "id": "pat-007-pit-03",
+            "text": "failing to confirm the post-withdrawal state.",
+            "riskLevel": "medium"
+          }
+        ]
+      },
+      "heuristics": {
+        "considerationsRaw": "User control & freedom; Undo & redo",
+        "considerations": [
+          "User control & freedom",
+          "Undo & redo"
+        ],
+        "sourceRaw": "Nielsen’s usability heuristics (Nielsen, 1994); interaction design theory on reversibility and recovery from actions (Norman, 2013); privacy law and usable privacy scholarship showing that consent is invalid if users cannot easily revise or withdraw decisions (Solove, 2013; Tsai et al., 2017).",
+        "whyTheseMatter": "Reversibility is required for valid consent. Consent is invalid if it cannot be easily revised."
+      },
+      "designGuidance": {
+        "keyDesignExpectationsAbstract": "Withdrawal must be simple, persistent, and immediate.",
+        "designChoicesThatSupportHeuristics": "Expose a persistent control in settings/preference center; label withdrawal clearly (‘withdraw consent’ / ‘turn off’); confirm changes; avoid extra friction compared to consenting.",
+        "evaluativeQuestionsRaw": "Is withdrawal available after consent is given? Is the control persistently accessible and labeled clearly? Does withdrawal require no more steps than opting in? Is the post-withdrawal state confirmed and visible?",
+        "evaluativeQuestions": [
+          "Is withdrawal available after consent is given?",
+          "Is the control persistently accessible and labeled clearly?",
+          "Does withdrawal require no more steps than opting in?",
+          "Is the post-withdrawal state confirmed and visible?"
+        ]
+      },
+      "exampleIds": [
+        "ex-026"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "id": "ex-001",
+      "name": "LinkedIn Privacy Settings",
+      "url": "https://www.linkedin.com/legal/privacy/settings",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-001"
+      ]
+    },
+    {
+      "id": "ex-002",
+      "name": "LinkedIn Privacy Policy Summary",
+      "url": "https://www.linkedin.com/legal/privacy-policy-summary",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-001"
+      ]
+    },
+    {
+      "id": "ex-003",
+      "name": "Apple's Privacy App Nutrition Labels",
+      "url": "https://www.businessinsider.com/reference/what-are-apple-privacy-nutrition-labels",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-001"
+      ]
+    },
+    {
+      "id": "ex-004",
+      "name": "Nutrition Labels (for Insta/FB)",
+      "url": "https://techwellness.com/blogs/expertise/how-to-stop-apps-tracking",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-001"
+      ]
+    },
+    {
+      "id": "ex-005",
+      "name": "Stripe Privacy Center",
+      "url": "https://stripe.com/en-ca/legal/privacy-center",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-001"
+      ]
+    },
+    {
+      "id": "ex-006",
+      "name": "Slack Create Channel Prompt",
+      "url": "https://www.digitaltrends.com/computing/how-to-make-slack-channel-private/",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-002"
+      ]
+    },
+    {
+      "id": "ex-007",
+      "name": "Slack Create Channel - Ticketing",
+      "url": "https://fluentsupport.com/docs/managing-tickets-using-slack/",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-002"
+      ]
+    },
+    {
+      "id": "ex-008",
+      "name": "Google Docs Sharing Dialog",
+      "url": "https://support.google.com/docs/answer/2494822",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-002"
+      ]
+    },
+    {
+      "id": "ex-009",
+      "name": "Google Docs Sharing Permission",
+      "url": "https://www.idownloadblog.com/2023/11/03/how-to-share-google-drive-files-folder-from-iphone-mac/",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-002"
+      ]
+    },
+    {
+      "id": "ex-010",
+      "name": "Chat Before Download",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0747563225003425",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-002"
+      ]
+    },
+    {
+      "id": "ex-011",
+      "name": "Notion Share Page Prompt",
+      "url": "https://www.notion.so/help/sharing-and-permissions",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-002"
+      ]
+    },
+    {
+      "id": "ex-012",
+      "name": "Spotify Privacy Page",
+      "url": "https://www.spotify.com/account/privacy/",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-003"
+      ]
+    },
+    {
+      "id": "ex-013",
+      "name": "Canva Privacy & Data Controls",
+      "url": "https://www.canva.com/help/privacy-policy/",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-003"
+      ]
+    },
+    {
+      "id": "ex-014",
+      "name": "USERCENTRICS",
+      "url": "https://usercentrics.com/knowledge-hub/types-of-consent/",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-003"
+      ]
+    },
+    {
+      "id": "ex-015",
+      "name": "Duolingo Privacy Settings",
+      "url": "https://www.duolingo.com/privacy",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-003"
+      ]
+    },
+    {
+      "id": "ex-016",
+      "name": "GitHub Cookie Consent (logged-in)",
+      "url": "https://github.com/topics/cookie-consent",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-004"
+      ]
+    },
+    {
+      "id": "ex-017",
+      "name": "Medium Email & Data Preferences",
+      "url": "https://medium.com/me/settings",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-004"
+      ]
+    },
+    {
+      "id": "ex-018",
+      "name": "ons.gov.uk",
+      "url": "https://www.ons.gov.uk/cookies",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-004"
+      ]
+    },
+    {
+      "id": "ex-019",
+      "name": "EU Public Service Portals (e.g., French Gov)",
+      "url": "https://www.service-public.fr/",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-004"
+      ]
+    },
+    {
+      "id": "ex-020",
+      "name": "Facebook Privacy Checkup",
+      "url": "https://about.fb.com/news/2020/01/privacy-checkup/",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-005"
+      ]
+    },
+    {
+      "id": "ex-021",
+      "name": "Uber Privacy Center",
+      "url": "https://medium.com/uber-security-privacy/its-data-privacy-week-introducing-uber-s-new-privacy-center-and-more-fbed358fef91",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-005"
+      ]
+    },
+    {
+      "id": "ex-022",
+      "name": "Google Account Preference Centre",
+      "url": "https://myaccount.google.com",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-005"
+      ]
+    },
+    {
+      "id": "ex-023",
+      "name": "Airbnb Privacy Settings",
+      "url": "https://www.airbnb.com/help/article/2858",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-005"
+      ]
+    },
+    {
+      "id": "ex-024",
+      "name": "Signal Privacy Defaults",
+      "url": "https://www.expressvpn.com/blog/what-is-signal-app/?srsltid=AfmBOoqz68k-emXb0DyuePYTmP5o8Xo7Sc28DyWZ2qBk5myG_mlhbPqe",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-006"
+      ]
+    },
+    {
+      "id": "ex-025",
+      "name": "WhatsApp Profile Visibility",
+      "url": "https://www.internetmatters.org/parental-controls/social-media/whatsapp/  https://ssd.eff.org/module/how-to-use-whatsapp",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-006"
+      ]
+    },
+    {
+      "id": "ex-026",
+      "name": "Banking Revoke Data",
+      "url": "https://www.thoughtworks.com/en-ca/insights/blog/open-banking-designing-trust-consumer-consent",
+      "figmaTemplateUrl": null,
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-007"
+      ]
+    }
+  ],
+  "indexes": {
+    "gdprTags": [
+      "GDPR-A12-Accessible-Notice-Presentation",
+      "GDPR-A12-Plain-Language-Notice",
+      "GDPR-A12-Readable-Formatting",
+      "GDPR-A13-Data-Controller-Identified",
+      "GDPR-A13-Data-Use-Explained-at-Collection",
+      "GDPR-A13-Purpose-Explained-at-Collection",
+      "GDPR-A13-Recipient-Disclosure",
+      "GDPR-A13-Retention-Info-Provided",
+      "GDPR-A13-Rights-Explained-in-UI",
+      "GDPR-A14-Indirect-Collection-Explained",
+      "GDPR-A14-Third-Party-Data-Source-Disclosed",
+      "GDPR-A15-Data-Access-Entry-Point",
+      "GDPR-A15-Processing-Overview-Visible",
+      "GDPR-A15-View-Personal-Data-UI",
+      "GDPR-A16-Editable-Personal-Data",
+      "GDPR-A16-Update-Data-Flow-Available",
+      "GDPR-A17-Account-Deletion-Path-Visible",
+      "GDPR-A17-Delete-Data-Request-UI",
+      "GDPR-A17-Deletion-Scope-Explained",
+      "GDPR-A18-Processing-Restriction-Option",
+      "GDPR-A18-Restricted-State-Explained",
+      "GDPR-A20-Data-Export-Available",
+      "GDPR-A20-Machine-Readable-Download",
+      "GDPR-A20-Portability-Explained",
+      "GDPR-A21-Direct-Marketing-Opt-Out",
+      "GDPR-A21-Objection-Control-Available",
+      "GDPR-A25-Non-Essential-Processing-Off-by-Default",
+      "GDPR-A25-Privacy-Protective-Defaults",
+      "GDPR-A25-User-Control-Prioritized",
+      "GDPR-A5-Data-Use-Visible-at-Collection",
+      "GDPR-A5-No-Hidden-Processing-UI",
+      "GDPR-A5-Non-Essential-Fields-Distinguished",
+      "GDPR-A5-Optional-Data-Clearly-Marked",
+      "GDPR-A5-Purpose-Explained-in-Context",
+      "GDPR-A5-Purpose-Separated-Controls",
+      "GDPR-A5-Purpose-Specific-Consent-Options",
+      "GDPR-A5-Transparent-Data-Use-Explanation",
+      "GDPR-A6-Processing-Basis-Explained",
+      "GDPR-A7-Clear-Distinguishable-Consent",
+      "GDPR-A7-Consent-Separate-from-Terms",
+      "GDPR-A7-Consent-Visually-Distinct",
+      "GDPR-A7-Equal-Prominence-Accept-Reject",
+      "GDPR-A7-Explicit-Affirmative-Action",
+      "GDPR-A7-Granular-Consent-Options",
+      "GDPR-A7-No-Preselected-Consent",
+      "GDPR-A7-Persistent-Consent-Withdrawal-Control",
+      "GDPR-A7-Plain-Language-Consent-Copy",
+      "GDPR-A7-Withdrawal-Always-Accessible",
+      "GDPR-A7-Withdrawal-As-Easy-As-Consent"
+    ],
+    "uiEvidenceTags": [
+      "UI-Accept-Reject-Equal-Interaction-Cost",
+      "UI-Accept-Reject-Visual-Symmetry",
+      "UI-Affirmative-Action-Required-To-Enable",
+      "UI-Clear-Withdrawal-Labeling",
+      "UI-Compact-Privacy-Format",
+      "UI-Consent-State-Visible",
+      "UI-Consent-Withdrawal-Available-Post-Agreement",
+      "UI-Context-Specific-Permission-Explanation",
+      "UI-Data-Visibility-Present",
+      "UI-Decline-Option-Available",
+      "UI-Dedicated-Privacy-Entry-Point",
+      "UI-Default-Choices-Reversible",
+      "UI-Default-State-Visible",
+      "UI-Defaults-Consistent-Across-Flows",
+      "UI-Expandable-Privacy-Details",
+      "UI-Feature-Access-Not-Blocked-On-Decline",
+      "UI-Logical-Grouping-of-Privacy-Controls",
+      "UI-Neutral-Consent-Copy",
+      "UI-No-All-Or-Nothing-Consent",
+      "UI-No-Visual-Bias-Toward-Accept",
+      "UI-Non-Essential-Processing-Off-By-Default",
+      "UI-Non-Legal-Language-Labels",
+      "UI-Notice-Timed-at-Data-Request",
+      "UI-One-Control-Per-Purpose",
+      "UI-Permission-Request-Unbundled",
+      "UI-Post-Withdrawal-State-Confirmed",
+      "UI-Preferences-Editable-Post-Onboarding",
+      "UI-Privacy-Controls-Centralized",
+      "UI-Purpose-Controls-Independently-Changeable",
+      "UI-Purpose-Explained-In-Action",
+      "UI-Purposes-Named-in-User-Language",
+      "UI-Reject-Option-Immediately-Visible",
+      "UI-Standardized-Privacy-Categories",
+      "UI-Summary-Privacy-Overview-Present",
+      "UI-Visual-Separation-Summary-vs-Full",
+      "UI-Withdrawal-Control-Persistently-Accessible",
+      "UI-Withdrawal-Effort-Comparable-To-Consent"
+    ],
+    "heuristics": [
+      "Aesthetic & minimalist design",
+      "Consistency & standards",
+      "Error prevention",
+      "Match between system & real world",
+      "Recognition rather than recall",
+      "Undo & redo",
+      "User control & freedom",
+      "Visibility of information",
+      "Visibility of system status"
+    ],
+    "templateCollections": []
+  }
+}
