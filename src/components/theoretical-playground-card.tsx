@@ -15,9 +15,9 @@ export function TheoreticalPlaygroundCard({ url }: TheoreticalPlaygroundCardProp
             <Figma className="h-8 w-8 text-primary" />
           </div>
           <div className="flex-1 space-y-1">
-            <h4 className="font-semibold text-lg">Theoretical Playground</h4>
+            <h4 className="font-semibold text-lg">Theoretical "Ideals" Playground</h4>
             <p className="text-muted-foreground text-sm">
-              Explore an editable Figma template with wireframes for this pattern.
+              Explore editable Figma UI pattern templates designed to reflect core privacy-respecting UI pattern principles, with flexibility for contextual adaptation. This space offers additional inspiration and supports deeper exploration of how privacy-aware design can be applied in real-world interfaces. These templates are provided as design guidance only and do not guarantee legal or regulatory compliance.
             </p>
           </div>
           <Button asChild className="gap-2 flex-shrink-0">
