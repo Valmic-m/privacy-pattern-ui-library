@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ExamplesSection } from "@/components/examples-section";
 import { GdprMappingCard } from "@/components/gdpr-mapping-card";
+import { TheoreticalPlaygroundCard } from "@/components/theoretical-playground-card";
 import type { RiskLevel } from "@/types/catalog";
 
 interface PatternPageProps {
@@ -261,6 +262,9 @@ export default async function PatternPage({ params }: PatternPageProps) {
                 No examples available for this pattern.
               </p>
             </section>
+          )}
+          {pattern.theoreticalPlaygroundUrl && (
+            <TheoreticalPlaygroundCard url={pattern.theoreticalPlaygroundUrl} />
           )}
         </TabsContent>
       </Tabs>

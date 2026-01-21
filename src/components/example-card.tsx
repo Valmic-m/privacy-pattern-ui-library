@@ -34,30 +34,30 @@ export function ExampleCard({ example, onMissingScreenshot }: ExampleCardProps) 
           className="aspect-video"
           onMissing={onMissingScreenshot}
         />
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-row gap-2">
           {urls.map((url, idx) => (
             <Button
               key={url}
               variant="outline"
               size="sm"
               asChild
-              className="gap-2"
+              className="gap-1.5 text-xs"
             >
               <a href={url} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="h-3.5 w-3.5" />
-                {urls.length > 1 ? `Source ${idx + 1}` : "View example source"}
+                <ExternalLink className="h-3 w-3" />
+                {urls.length > 1 ? `Source ${idx + 1}` : "View source"}
               </a>
             </Button>
           ))}
           {example.figmaTemplateUrl && (
-            <Button variant="outline" size="sm" asChild className="gap-2">
+            <Button variant="outline" size="sm" asChild className="gap-1.5 text-xs">
               <a
                 href={example.figmaTemplateUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Figma className="h-3.5 w-3.5" />
-                Figma Template
+                <Figma className="h-3 w-3" />
+                Figma template
               </a>
             </Button>
           )}
