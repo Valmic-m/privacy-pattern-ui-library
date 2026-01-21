@@ -3,6 +3,26 @@ import type { Pattern } from "@/types/catalog";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { parseGdprTag } from "@/lib/gdpr";
+import {
+  Layers,
+  Clock,
+  SlidersHorizontal,
+  Scale,
+  Settings,
+  ShieldCheck,
+  Undo2,
+  type LucideIcon,
+} from "lucide-react";
+
+const patternIcons: Record<string, LucideIcon> = {
+  "pat-001": Layers,
+  "pat-002": Clock,
+  "pat-003": SlidersHorizontal,
+  "pat-004": Scale,
+  "pat-005": Settings,
+  "pat-006": ShieldCheck,
+  "pat-007": Undo2,
+};
 
 interface PatternCardProps {
   pattern: Pattern;
@@ -29,11 +49,15 @@ export function PatternCard({ pattern, selectedTags = [] }: PatternCardProps) {
     pattern.gdprBasis.gdprTags.includes(tag)
   );
 
+  // Get icon for this pattern
+  const Icon = patternIcons[pattern.id];
+
   return (
     <Link href={`/patterns/${pattern.slug}/`} className="group block">
       <Card className="h-full transition-all hover:shadow-md hover:ring-2 hover:ring-primary/20 group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2">
         <CardHeader>
-          <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors">
+          <CardTitle className="flex items-center gap-2 text-lg leading-tight group-hover:text-primary transition-colors">
+            {Icon && <Icon className="h-5 w-5 text-primary shrink-0" />}
             {pattern.name}
           </CardTitle>
         </CardHeader>

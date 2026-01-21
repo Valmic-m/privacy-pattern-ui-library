@@ -1,6 +1,16 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import {
+  ArrowLeft,
+  Layers,
+  Clock,
+  SlidersHorizontal,
+  Scale,
+  Settings,
+  ShieldCheck,
+  Undo2,
+  type LucideIcon,
+} from "lucide-react";
 import { loadCatalog } from "@/lib/catalog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -16,6 +26,16 @@ import { ExamplesSection } from "@/components/examples-section";
 import { GdprMappingCard } from "@/components/gdpr-mapping-card";
 import { TheoreticalPlaygroundCard } from "@/components/theoretical-playground-card";
 import type { RiskLevel } from "@/types/catalog";
+
+const patternIcons: Record<string, LucideIcon> = {
+  "pat-001": Layers,
+  "pat-002": Clock,
+  "pat-003": SlidersHorizontal,
+  "pat-004": Scale,
+  "pat-005": Settings,
+  "pat-006": ShieldCheck,
+  "pat-007": Undo2,
+};
 
 interface PatternPageProps {
   params: Promise<{ slug: string }>;
@@ -66,6 +86,7 @@ export default async function PatternPage({ params }: PatternPageProps) {
   }
 
   const examples = getExamplesForPattern(pattern.id);
+  const Icon = patternIcons[pattern.id];
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -79,7 +100,10 @@ export default async function PatternPage({ params }: PatternPageProps) {
 
       {/* Header */}
       <header className="mb-8 max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold tracking-tight">{pattern.name}</h1>
+        <h1 className="flex items-center gap-3 text-3xl font-bold tracking-tight">
+          {Icon && <Icon className="h-8 w-8 text-primary shrink-0" />}
+          {pattern.name}
+        </h1>
         <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
           {pattern.definition}
         </p>
