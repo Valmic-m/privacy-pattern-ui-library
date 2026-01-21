@@ -108,6 +108,7 @@ const PatternSchema = z.object({
   heuristics: HeuristicsSchema,
   designGuidance: DesignGuidanceSchema,
   exampleIds: z.array(z.string().regex(/^ex-\d{3}$/) as z.ZodType<ExampleId>),
+  theoreticalPlaygroundUrl: z.string().nullable(),
 });
 
 const ExampleSchema = z.object({

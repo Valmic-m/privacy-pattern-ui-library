@@ -152,7 +152,8 @@
         "ex-003",
         "ex-004",
         "ex-005"
-      ]
+      ],
+      "theoreticalPlaygroundUrl": "https://www.figma.com/design/YK4OY847Sr7EQ1XToyfoPO/Privacy-UI-Pattern-Wireframes?node-id=80-9&t=dxVKa7QfbDIrDlUh-1"
     },
     {
       "id": "pat-002",
@@ -292,8 +293,10 @@
         "ex-008",
         "ex-009",
         "ex-010",
-        "ex-011"
-      ]
+        "ex-011",
+        "ex-027"
+      ],
+      "theoreticalPlaygroundUrl": "https://www.figma.com/design/YK4OY847Sr7EQ1XToyfoPO/Privacy-UI-Pattern-Wireframes?node-id=80-10&t=dxVKa7QfbDIrDlUh-1"
     },
     {
       "id": "pat-003",
@@ -424,7 +427,8 @@
         "ex-013",
         "ex-014",
         "ex-015"
-      ]
+      ],
+      "theoreticalPlaygroundUrl": "https://www.figma.com/design/YK4OY847Sr7EQ1XToyfoPO/Privacy-UI-Pattern-Wireframes?node-id=80-12&t=dxVKa7QfbDIrDlUh-1"
     },
     {
       "id": "pat-004",
@@ -549,7 +553,8 @@
         "ex-017",
         "ex-018",
         "ex-019"
-      ]
+      ],
+      "theoreticalPlaygroundUrl": "https://www.figma.com/design/YK4OY847Sr7EQ1XToyfoPO/Privacy-UI-Pattern-Wireframes?node-id=80-11&t=dxVKa7QfbDIrDlUh-1"
     },
     {
       "id": "pat-005",
@@ -738,7 +743,8 @@
         "ex-021",
         "ex-022",
         "ex-023"
-      ]
+      ],
+      "theoreticalPlaygroundUrl": "https://www.figma.com/design/YK4OY847Sr7EQ1XToyfoPO/Privacy-UI-Pattern-Wireframes?node-id=80-14&t=dxVKa7QfbDIrDlUh-1"
     },
     {
       "id": "pat-006",
@@ -862,7 +868,8 @@
       "exampleIds": [
         "ex-024",
         "ex-025"
-      ]
+      ],
+      "theoreticalPlaygroundUrl": "https://www.figma.com/design/YK4OY847Sr7EQ1XToyfoPO/Privacy-UI-Pattern-Wireframes?node-id=80-13&t=dxVKa7QfbDIrDlUh-1"
     },
     {
       "id": "pat-007",
@@ -984,7 +991,8 @@
       },
       "exampleIds": [
         "ex-026"
-      ]
+      ],
+      "theoreticalPlaygroundUrl": "https://www.figma.com/design/YK4OY847Sr7EQ1XToyfoPO/Privacy-UI-Pattern-Wireframes?node-id=80-15&t=dxVKa7QfbDIrDlUh-1"
     }
   ],
   "examples": [
@@ -992,7 +1000,7 @@
       "id": "ex-001",
       "name": "LinkedIn Privacy Settings",
       "url": "https://www.linkedin.com/legal/privacy/settings",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=5-4317&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-001"
@@ -1002,7 +1010,7 @@
       "id": "ex-002",
       "name": "LinkedIn Privacy Policy Summary",
       "url": "https://www.linkedin.com/legal/privacy-policy-summary",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=5-4324&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-001"
@@ -1012,7 +1020,7 @@
       "id": "ex-003",
       "name": "Apple's Privacy App Nutrition Labels",
       "url": "https://www.businessinsider.com/reference/what-are-apple-privacy-nutrition-labels",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=5-4320&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-001"
@@ -1022,7 +1030,7 @@
       "id": "ex-004",
       "name": "Nutrition Labels (for Insta/FB)",
       "url": "https://techwellness.com/blogs/expertise/how-to-stop-apps-tracking",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=5-4320&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-001"
@@ -1032,7 +1040,7 @@
       "id": "ex-005",
       "name": "Stripe Privacy Center",
       "url": "https://stripe.com/en-ca/legal/privacy-center",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=5-4322&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-001"
@@ -1042,7 +1050,7 @@
       "id": "ex-006",
       "name": "Slack Create Channel Prompt",
       "url": "https://www.digitaltrends.com/computing/how-to-make-slack-channel-private/",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4351&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-002"
@@ -1052,7 +1060,7 @@
       "id": "ex-007",
       "name": "Slack Create Channel - Ticketing",
       "url": "https://fluentsupport.com/docs/managing-tickets-using-slack/",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4349&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-002"
@@ -1062,7 +1070,7 @@
       "id": "ex-008",
       "name": "Google Docs Sharing Dialog",
       "url": "https://support.google.com/docs/answer/2494822",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4348&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-002"
@@ -1072,7 +1080,7 @@
       "id": "ex-009",
       "name": "Google Docs Sharing Permission",
       "url": "https://www.idownloadblog.com/2023/11/03/how-to-share-google-drive-files-folder-from-iphone-mac/",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4347&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-002"
@@ -1082,7 +1090,7 @@
       "id": "ex-010",
       "name": "Chat Before Download",
       "url": "https://www.sciencedirect.com/science/article/pii/S0747563225003425",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4345&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-002"
@@ -1092,7 +1100,7 @@
       "id": "ex-011",
       "name": "Notion Share Page Prompt",
       "url": "https://www.notion.so/help/sharing-and-permissions",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4352&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-002"
@@ -1102,7 +1110,7 @@
       "id": "ex-012",
       "name": "Spotify Privacy Page",
       "url": "https://www.spotify.com/account/privacy/",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4342&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-003"
@@ -1112,7 +1120,7 @@
       "id": "ex-013",
       "name": "Canva Privacy & Data Controls",
       "url": "https://www.canva.com/help/privacy-policy/",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4339&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-003"
@@ -1122,7 +1130,7 @@
       "id": "ex-014",
       "name": "USERCENTRICS",
       "url": "https://usercentrics.com/knowledge-hub/types-of-consent/",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4343&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-003"
@@ -1132,7 +1140,7 @@
       "id": "ex-015",
       "name": "Duolingo Privacy Settings",
       "url": "https://www.duolingo.com/privacy",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4341&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-003"
@@ -1142,7 +1150,7 @@
       "id": "ex-016",
       "name": "GitHub Cookie Consent (logged-in)",
       "url": "https://github.com/topics/cookie-consent",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=5-4327&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-004"
@@ -1152,7 +1160,7 @@
       "id": "ex-017",
       "name": "Medium Email & Data Preferences",
       "url": "https://medium.com/me/settings",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=5-4326&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-004"
@@ -1162,7 +1170,7 @@
       "id": "ex-018",
       "name": "ons.gov.uk",
       "url": "https://www.ons.gov.uk/cookies",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=5-4329&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-004"
@@ -1172,7 +1180,7 @@
       "id": "ex-019",
       "name": "EU Public Service Portals (e.g., French Gov)",
       "url": "https://www.service-public.fr/",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=5-4325&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-004"
@@ -1182,7 +1190,7 @@
       "id": "ex-020",
       "name": "Facebook Privacy Checkup",
       "url": "https://about.fb.com/news/2020/01/privacy-checkup/",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4333&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-005"
@@ -1192,7 +1200,7 @@
       "id": "ex-021",
       "name": "Uber Privacy Center",
       "url": "https://medium.com/uber-security-privacy/its-data-privacy-week-introducing-uber-s-new-privacy-center-and-more-fbed358fef91",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4332&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-005"
@@ -1202,7 +1210,7 @@
       "id": "ex-022",
       "name": "Google Account Preference Centre",
       "url": "https://myaccount.google.com",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4330&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-005"
@@ -1212,7 +1220,7 @@
       "id": "ex-023",
       "name": "Airbnb Privacy Settings",
       "url": "https://www.airbnb.com/help/article/2858",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4331&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-005"
@@ -1222,7 +1230,7 @@
       "id": "ex-024",
       "name": "Signal Privacy Defaults",
       "url": "https://www.expressvpn.com/blog/what-is-signal-app/?srsltid=AfmBOoqz68k-emXb0DyuePYTmP5o8Xo7Sc28DyWZ2qBk5myG_mlhbPqe",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4334&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-006"
@@ -1232,7 +1240,7 @@
       "id": "ex-025",
       "name": "WhatsApp Profile Visibility",
       "url": "https://www.internetmatters.org/parental-controls/social-media/whatsapp/  https://ssd.eff.org/module/how-to-use-whatsapp",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4336&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-006"
@@ -1242,10 +1250,20 @@
       "id": "ex-026",
       "name": "Banking Revoke Data",
       "url": "https://www.thoughtworks.com/en-ca/insights/blog/open-banking-designing-trust-consumer-consent",
-      "figmaTemplateUrl": null,
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4355&t=F45uHnO28DaLYK4E-1",
       "generalDesignTemplateCollection": null,
       "patternIds": [
         "pat-007"
+      ]
+    },
+    {
+      "id": "ex-027",
+      "name": "Slack Posting Permissions",
+      "url": "https://slack.com/help/articles/360004635551-Manage-posting-permissions-for-channels",
+      "figmaTemplateUrl": "https://www.figma.com/design/HcIvnK7EQiz0GGWYAEkbao/Example-Specific-Privacy-UI-Templates?node-id=12-4350&t=F45uHnO28DaLYK4E-1",
+      "generalDesignTemplateCollection": null,
+      "patternIds": [
+        "pat-002"
       ]
     }
   ],

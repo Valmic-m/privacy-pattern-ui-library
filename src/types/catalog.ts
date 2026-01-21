@@ -125,6 +125,7 @@ export interface Pattern {
   heuristics: Heuristics;
   designGuidance: DesignGuidance;
   exampleIds: ExampleId[];
+  theoreticalPlaygroundUrl: string | null;
 }
 
 // ============================================================================
