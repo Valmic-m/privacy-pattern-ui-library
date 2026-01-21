@@ -128,6 +128,38 @@ export function Footer() {
             throughout the design process.
           </p>
         </div>
+
+        <Separator className="my-6" />
+
+        {/* Analytics Disclosure */}
+        <div>
+          <h3 className="font-semibold text-foreground">Analytics</h3>
+          <p className="mt-2 text-xs text-muted-foreground">
+            We use Microsoft Clarity to understand how visitors interact with
+            our website through aggregated behavioral metrics, heatmaps, and
+            session replays. These insights help us improve site usability,
+            content, and overall performance.
+          </p>
+          <p className="mt-2 text-xs text-muted-foreground">
+            Usage data may be collected through first-party cookies and similar
+            technologies to support site optimization and usability analysis.
+            Microsoft processes this data on our behalf as an analytics service
+            provider.
+          </p>
+          <p className="mt-2 text-xs text-muted-foreground">
+            For more information about how Microsoft processes data collected
+            through Clarity, please review the{" "}
+            <a
+              href="https://privacy.microsoft.com/privacystatement"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Microsoft Privacy Statement
+            </a>
+            .
+          </p>
+        </div>
       </div>
     </footer>
   );
