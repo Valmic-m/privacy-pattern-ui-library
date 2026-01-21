@@ -121,7 +121,7 @@
           },
           {
             "id": "pat-001-pit-03",
-            "text": "placing critical information only in deep layers rarely accessed.",
+            "text": "placing critical information only in deep layers rarely accessed",
             "riskLevel": "medium"
           }
         ]
@@ -261,7 +261,7 @@
           },
           {
             "id": "pat-002-pit-03",
-            "text": "bundling multiple permissions into a single notice.",
+            "text": "bundling multiple permissions into a single notice",
             "riskLevel": "medium"
           }
         ]
@@ -397,7 +397,7 @@
           },
           {
             "id": "pat-003-pit-03",
-            "text": "offering granularity only after initial acceptance.",
+            "text": "offering granularity only after initial acceptance",
             "riskLevel": "medium"
           }
         ]
@@ -523,7 +523,7 @@
           },
           {
             "id": "pat-004-pit-03",
-            "text": "using emotionally loaded or fear-based language.",
+            "text": "using emotionally loaded or fear-based language",
             "riskLevel": "medium"
           }
         ]
@@ -712,7 +712,7 @@
           },
           {
             "id": "pat-005-pit-03",
-            "text": "allowing viewing without meaningful control.",
+            "text": "allowing viewing without meaningful control",
             "riskLevel": "medium"
           }
         ]
@@ -840,7 +840,7 @@
           },
           {
             "id": "pat-006-pit-03",
-            "text": "defaults contradicting prior user choices.",
+            "text": "defaults contradicting prior user choices",
             "riskLevel": "medium"
           }
         ]
@@ -964,7 +964,7 @@
           },
           {
             "id": "pat-007-pit-03",
-            "text": "failing to confirm the post-withdrawal state.",
+            "text": "failing to confirm the post-withdrawal state",
             "riskLevel": "medium"
           }
         ]
