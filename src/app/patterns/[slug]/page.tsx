@@ -107,7 +107,7 @@ export default async function PatternPage({ params }: PatternPageProps) {
         <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
           {pattern.definition}
         </p>
-        <div className="mt-4 rounded-lg bg-muted/50 p-4">
+        <div className="mt-4 rounded-lg bg-primary/10 p-4">
           <h2 className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
             Goal
           </h2>
