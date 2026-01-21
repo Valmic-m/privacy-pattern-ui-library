@@ -103,6 +103,19 @@ export function Footer() {
 
         <Separator className="my-6" />
 
+        {/* Mission */}
+        <div>
+          <h3 className="font-semibold text-foreground">Mission</h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            This UI Privacy Library supports privacy by design by translating
+            regulatory principles into practical, human-centred interface
+            patterns that help designers make privacy-respectful decisions
+            throughout the design process.
+          </p>
+        </div>
+
+        <Separator className="my-6" />
+
         {/* Disclaimer */}
         <div>
           <h3 className="font-semibold text-foreground">Disclaimer</h3>
@@ -113,19 +126,6 @@ export function Footer() {
             is intended to support GDPR-aligned design and privacy-by-design
             practices; however, it does not guarantee legal or regulatory
             compliance.
-          </p>
-        </div>
-
-        <Separator className="my-6" />
-
-        {/* Mission */}
-        <div>
-          <h3 className="font-semibold text-foreground">Mission</h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            This UI Privacy Library supports privacy by design by translating
-            regulatory principles into practical, human-centred interface
-            patterns that help designers make privacy-respectful decisions
-            throughout the design process.
           </p>
         </div>
 
