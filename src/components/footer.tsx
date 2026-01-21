@@ -19,6 +19,12 @@ export function Footer() {
             >
               Community & FAQ
             </Link>
+            <Link
+              href="/future-plans/"
+              className="text-sm text-primary hover:underline"
+            >
+              Future Plans
+            </Link>
           </nav>
         </div>
 
