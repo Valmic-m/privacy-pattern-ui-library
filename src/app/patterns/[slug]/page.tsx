@@ -122,7 +122,7 @@ export default async function PatternPage({ params }: PatternPageProps) {
 
       {/* Tabs */}
       <Tabs defaultValue="overview" className="max-w-3xl mx-auto">
-        <TabsList className="flex-wrap h-auto gap-1">
+        <TabsList className="flex-wrap h-auto gap-1 bg-primary/10">
           <TabsTrigger value="overview">Overview</TabsTrigger>
           <TabsTrigger value="usecases">Use Cases</TabsTrigger>
           <TabsTrigger value="pitfalls">Pitfalls</TabsTrigger>
