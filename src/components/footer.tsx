@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
@@ -5,6 +6,24 @@ export function Footer() {
     <footer className="mt-auto bg-muted">
       <Separator />
       <div className="container mx-auto px-4 py-10">
+        {/* Navigation */}
+        <div className="mb-6">
+          <h3 className="font-semibold text-foreground">Explore</h3>
+          <nav className="mt-2 flex flex-wrap gap-4">
+            <Link href="/" className="text-sm text-primary hover:underline">
+              Pattern Library
+            </Link>
+            <Link
+              href="/community/"
+              className="text-sm text-primary hover:underline"
+            >
+              Community & FAQ
+            </Link>
+          </nav>
+        </div>
+
+        <Separator className="mb-6" />
+
         {/* Researcher and Supervisors */}
         <div className="grid gap-8 md:grid-cols-2">
           {/* Researcher */}
