@@ -32,25 +32,7 @@ export function PatternCard({ pattern, selectedTags = [] }: PatternCardProps) {
   return (
     <Link href={`/patterns/${pattern.slug}/`} className="group block">
       <Card className="h-full transition-all hover:shadow-md hover:ring-2 hover:ring-primary/20 group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2">
-        <CardHeader className="pb-2">
-          {/* Metadata Row */}
-          <div className="flex flex-wrap items-center gap-1.5 mb-2">
-            {articleNumbers.map((num) => (
-              <Badge
-                key={num}
-                variant="outline"
-                className="text-xs px-1.5 py-0"
-              >
-                Art. {num}
-              </Badge>
-            ))}
-            {exampleCount > 0 && (
-              <Badge variant="secondary" className="text-xs px-1.5 py-0">
-                {exampleCount} {exampleCount === 1 ? "example" : "examples"}
-              </Badge>
-            )}
-          </div>
-
+        <CardHeader>
           <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors">
             {pattern.name}
           </CardTitle>
@@ -90,6 +72,24 @@ export function PatternCard({ pattern, selectedTags = [] }: PatternCardProps) {
               </div>
             </div>
           )}
+
+          {/* Metadata Row */}
+          <div className="flex flex-wrap items-center gap-1.5 mt-3">
+            {articleNumbers.map((num) => (
+              <Badge
+                key={num}
+                variant="outline"
+                className="text-xs px-1.5 py-0"
+              >
+                Art. {num}
+              </Badge>
+            ))}
+            {exampleCount > 0 && (
+              <Badge variant="secondary" className="text-xs px-1.5 py-0">
+                {exampleCount} {exampleCount === 1 ? "example" : "examples"}
+              </Badge>
+            )}
+          </div>
         </CardContent>
       </Card>
     </Link>
