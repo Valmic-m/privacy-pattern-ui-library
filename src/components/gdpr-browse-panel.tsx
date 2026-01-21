@@ -154,10 +154,10 @@ export function GdprBrowsePanel({
                       >
                         <div
                           className={cn(
-                            "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary",
+                            "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border",
                             isSelected
-                              ? "bg-primary text-primary-foreground"
-                              : "[&_svg]:invisible"
+                              ? "border-primary bg-primary text-primary-foreground"
+                              : "border-gray-600 dark:border-gray-400 [&_svg]:invisible"
                           )}
                         >
                           <Check className="h-3 w-3" />
