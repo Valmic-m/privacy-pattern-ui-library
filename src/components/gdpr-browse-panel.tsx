@@ -104,6 +104,23 @@ export function GdprBrowsePanel({
 
         <Separator />
 
+        {/* Expectation Selector Header */}
+        <div className="flex items-center justify-between">
+          <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+            Expectation selector
+          </p>
+          {selected.length > 0 && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={onClearAll}
+              className="h-6 px-2 text-xs text-violet-600 hover:text-violet-700 dark:text-violet-400 dark:hover:text-violet-300"
+            >
+              Clear selection
+            </Button>
+          )}
+        </div>
+
         {/* Expectation Selector */}
         <TooltipProvider delayDuration={300}>
           <Command className="rounded-lg border">
@@ -137,10 +154,10 @@ export function GdprBrowsePanel({
                       >
                         <div
                           className={cn(
-                            "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary",
+                            "mr-2 flex h-4 w-4 items-center justify-center rounded-sm border",
                             isSelected
-                              ? "bg-primary text-primary-foreground"
-                              : "opacity-50 [&_svg]:invisible"
+                              ? "border-primary bg-primary text-primary-foreground"
+                              : "border-gray-600 dark:border-gray-400 [&_svg]:invisible"
                           )}
                         >
                           <Check className="h-3 w-3" />
