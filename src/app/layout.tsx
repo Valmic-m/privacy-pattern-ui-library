@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/footer";
+import { ClarityProvider } from "@/components/clarity-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,9 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex min-h-screen flex-col antialiased" suppressHydrationWarning>
+        <ClarityProvider>
           {children}
           <Footer />
-        </body>
+        </ClarityProvider>
+      </body>
     </html>
   );
 }
