@@ -43,3 +43,8 @@ Tailwind CSS 4.0 using `@theme inline` syntax in `globals.css`. The `cn()` utili
 - Components use Radix UI primitives for accessibility
 - Static export means no server-side features - all interactivity is client-side
 - URLs use trailing slashes (configured in `next.config.ts`)
+
+## UI Components & Icons
+
+- **ALWAYS** use components from https://ui.shadcn.com/docs/components - never create custom components or UIs
+- **ALWAYS** use Lucide icons (`lucide-react`) for all iconography - never use other icon libraries

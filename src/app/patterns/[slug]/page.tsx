@@ -78,7 +78,7 @@ export default async function PatternPage({ params }: PatternPageProps) {
       </Button>
 
       {/* Header */}
-      <header className="mb-8 max-w-3xl">
+      <header className="mb-8 max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold tracking-tight">{pattern.name}</h1>
         <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
           {pattern.definition}
@@ -92,10 +92,12 @@ export default async function PatternPage({ params }: PatternPageProps) {
       </header>
 
       {/* GDPR Mapping Card */}
-      <GdprMappingCard gdprBasis={pattern.gdprBasis} />
+      <div className="max-w-3xl mx-auto">
+        <GdprMappingCard gdprBasis={pattern.gdprBasis} />
+      </div>
 
       {/* Tabs */}
-      <Tabs defaultValue="overview" className="max-w-3xl">
+      <Tabs defaultValue="overview" className="max-w-3xl mx-auto">
         <TabsList className="flex-wrap h-auto gap-1">
           <TabsTrigger value="overview">Overview</TabsTrigger>
           <TabsTrigger value="usecases">Use Cases</TabsTrigger>
